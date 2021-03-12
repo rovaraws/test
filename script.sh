@@ -1,1 +1,2 @@
-date; time; who am i
+#!/bin/bash
+echo "hello, today is $(date)"
