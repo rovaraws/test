@@ -1,0 +1,2494 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-10-0-0-233 ~]$ sudo -i
+[root@ip-10-0-0-233 ~]# yum update -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No packages marked for update
+[root@ip-10-0-0-233 ~]# yum update -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No packages marked for update
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# java -version
+-bash: java: command not found
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# sudo yum list | grep -io penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+penjdk
+[root@ip-10-0-0-233 ~]# ^C
+[root@ip-10-0-0-233 ~]# sudo yum list | grep -i openjdk
+java-1.7.0-openjdk.x86_64              1:1.7.0.261-2.6.22.2.amzn2.0.1 amzn2-core
+java-1.7.0-openjdk-accessibility.x86_64
+java-1.7.0-openjdk-demo.x86_64         1:1.7.0.261-2.6.22.2.amzn2.0.1 amzn2-core
+java-1.7.0-openjdk-devel.x86_64        1:1.7.0.261-2.6.22.2.amzn2.0.1 amzn2-core
+java-1.7.0-openjdk-headless.x86_64     1:1.7.0.261-2.6.22.2.amzn2.0.1 amzn2-core
+java-1.7.0-openjdk-javadoc.noarch      1:1.7.0.261-2.6.22.2.amzn2.0.1 amzn2-core
+java-1.7.0-openjdk-src.x86_64          1:1.7.0.261-2.6.22.2.amzn2.0.1 amzn2-core
+java-1.8.0-openjdk.x86_64              1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-accessibility.x86_64
+java-1.8.0-openjdk-accessibility-debug.x86_64
+java-1.8.0-openjdk-debug.x86_64        1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-demo.x86_64         1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-demo-debug.x86_64   1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-devel.x86_64        1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-devel-debug.x86_64  1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-headless.x86_64     1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-headless-debug.x86_64
+java-1.8.0-openjdk-javadoc.noarch      1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-javadoc-debug.noarch
+java-1.8.0-openjdk-javadoc-zip.noarch  1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-javadoc-zip-debug.noarch
+java-1.8.0-openjdk-src.x86_64          1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+java-1.8.0-openjdk-src-debug.x86_64    1:1.8.0.252.b09-2.amzn2.0.1    amzn2-core
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# yum install java-1.8.0-openjdk.x86_64
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package java-1.8.0-openjdk.x86_64 1:1.8.0.252.b09-2.amzn2.0.1 will be installed
+--> Processing Dependency: java-1.8.0-openjdk-headless(x86-64) = 1:1.8.0.252.b09-2.amzn2.0.1 for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: xorg-x11-fonts-Type1 for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libjvm.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libjava.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libXcomposite(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: gtk2(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: fontconfig(x86-64) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libjvm.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libjava.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libgif.so.4()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Running transaction check
+---> Package alsa-lib.x86_64 0:1.1.4.1-2.amzn2 will be installed
+---> Package fontconfig.x86_64 0:2.13.0-4.3.amzn2 will be installed
+--> Processing Dependency: fontpackages-filesystem for package: fontconfig-2.13.0-4.3.amzn2.x86_64
+--> Processing Dependency: dejavu-sans-fonts for package: fontconfig-2.13.0-4.3.amzn2.x86_64
+---> Package giflib.x86_64 0:4.1.6-9.amzn2.0.2 will be installed
+--> Processing Dependency: libSM.so.6()(64bit) for package: giflib-4.1.6-9.amzn2.0.2.x86_64
+--> Processing Dependency: libICE.so.6()(64bit) for package: giflib-4.1.6-9.amzn2.0.2.x86_64
+---> Package gtk2.x86_64 0:2.24.31-1.amzn2.0.2 will be installed
+--> Processing Dependency: pango >= 1.20.0-1 for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXrandr >= 1.2.99.4-2 for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: atk >= 1.29.4-2 for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: hicolor-icon-theme for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: gtk-update-icon-cache for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libpango-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libcups.so.2()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libcairo.so.2()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libatk-1.0.so.0()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXrandr.so.2()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXinerama.so.1()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXfixes.so.3()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXdamage.so.1()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+--> Processing Dependency: libXcursor.so.1()(64bit) for package: gtk2-2.24.31-1.amzn2.0.2.x86_64
+---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.252.b09-2.amzn2.0.1 will be installed
+--> Processing Dependency: tzdata-java >= 2015d for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: copy-jdk-configs >= 3.3 for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: pcsc-lite-libs(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: lksctp-tools(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.amzn2.0.1.x86_64
+--> Processing Dependency: jpackage-utils for package: 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.amzn2.0.1.x86_64
+---> Package libX11.x86_64 0:1.6.7-2.amzn2 will be installed
+--> Processing Dependency: libX11-common >= 1.6.7-2.amzn2 for package: libX11-1.6.7-2.amzn2.x86_64
+--> Processing Dependency: libxcb.so.1()(64bit) for package: libX11-1.6.7-2.amzn2.x86_64
+---> Package libXcomposite.x86_64 0:0.4.4-4.1.amzn2.0.2 will be installed
+---> Package libXext.x86_64 0:1.3.3-3.amzn2.0.2 will be installed
+---> Package libXi.x86_64 0:1.7.9-1.amzn2.0.2 will be installed
+---> Package libXrender.x86_64 0:0.9.10-1.amzn2.0.2 will be installed
+---> Package libXtst.x86_64 0:1.2.3-1.amzn2.0.2 will be installed
+---> Package xorg-x11-fonts-Type1.noarch 0:7.5-9.amzn2 will be installed
+--> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.amzn2.noarch
+--> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.amzn2.noarch
+--> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.amzn2.noarch
+--> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.amzn2.noarch
+--> Running transaction check
+---> Package atk.x86_64 0:2.22.0-3.amzn2.0.2 will be installed
+---> Package cairo.x86_64 0:1.15.12-4.amzn2 will be installed
+--> Processing Dependency: libpixman-1.so.0()(64bit) for package: cairo-1.15.12-4.amzn2.x86_64
+--> Processing Dependency: libGL.so.1()(64bit) for package: cairo-1.15.12-4.amzn2.x86_64
+--> Processing Dependency: libEGL.so.1()(64bit) for package: cairo-1.15.12-4.amzn2.x86_64
+---> Package copy-jdk-configs.noarch 0:3.3-10.amzn2 will be installed
+---> Package cups-libs.x86_64 1:1.6.3-40.amzn2 will be installed
+--> Processing Dependency: libavahi-common.so.3()(64bit) for package: 1:cups-libs-1.6.3-40.amzn2.x86_64
+--> Processing Dependency: libavahi-client.so.3()(64bit) for package: 1:cups-libs-1.6.3-40.amzn2.x86_64
+---> Package dejavu-sans-fonts.noarch 0:2.33-6.amzn2 will be installed
+--> Processing Dependency: dejavu-fonts-common = 2.33-6.amzn2 for package: dejavu-sans-fonts-2.33-6.amzn2.noarch
+---> Package fontpackages-filesystem.noarch 0:1.44-8.amzn2 will be installed
+---> Package gdk-pixbuf2.x86_64 0:2.36.12-3.amzn2 will be installed
+--> Processing Dependency: libjasper.so.1()(64bit) for package: gdk-pixbuf2-2.36.12-3.amzn2.x86_64
+---> Package gtk-update-icon-cache.x86_64 0:3.22.30-3.amzn2 will be installed
+---> Package hicolor-icon-theme.noarch 0:0.12-7.amzn2 will be installed
+---> Package javapackages-tools.noarch 0:3.4.1-11.amzn2 will be installed
+--> Processing Dependency: python-javapackages = 3.4.1-11.amzn2 for package: javapackages-tools-3.4.1-11.amzn2.noarch
+--> Processing Dependency: libxslt for package: javapackages-tools-3.4.1-11.amzn2.noarch
+---> Package libICE.x86_64 0:1.0.9-9.amzn2.0.2 will be installed
+---> Package libSM.x86_64 0:1.2.2-2.amzn2.0.2 will be installed
+---> Package libX11-common.noarch 0:1.6.7-2.amzn2 will be installed
+---> Package libXcursor.x86_64 0:1.1.15-1.amzn2 will be installed
+---> Package libXdamage.x86_64 0:1.1.4-4.1.amzn2.0.2 will be installed
+---> Package libXfixes.x86_64 0:5.0.3-1.amzn2.0.2 will be installed
+---> Package libXinerama.x86_64 0:1.1.3-2.1.amzn2.0.2 will be installed
+---> Package libXrandr.x86_64 0:1.5.1-2.amzn2.0.3 will be installed
+---> Package libxcb.x86_64 0:1.12-1.amzn2.0.2 will be installed
+--> Processing Dependency: libXau.so.6()(64bit) for package: libxcb-1.12-1.amzn2.0.2.x86_64
+---> Package lksctp-tools.x86_64 0:1.0.17-2.amzn2.0.2 will be installed
+---> Package pango.x86_64 0:1.42.4-4.amzn2 will be installed
+--> Processing Dependency: libthai(x86-64) >= 0.1.9 for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libXft(x86-64) >= 2.0.0 for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: harfbuzz(x86-64) >= 1.4.2 for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: fribidi(x86-64) >= 1.0 for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libthai.so.0(LIBTHAI_0.1)(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libthai.so.0()(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libharfbuzz.so.0()(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libfribidi.so.0()(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+--> Processing Dependency: libXft.so.2()(64bit) for package: pango-1.42.4-4.amzn2.x86_64
+---> Package pcsc-lite-libs.x86_64 0:1.8.8-7.amzn2 will be installed
+---> Package ttmkfdir.x86_64 0:3.0.9-42.amzn2.0.2 will be installed
+---> Package tzdata-java.noarch 0:2020a-1.amzn2 will be installed
+---> Package xorg-x11-font-utils.x86_64 1:7.5-21.amzn2 will be installed
+--> Processing Dependency: libfontenc.so.1()(64bit) for package: 1:xorg-x11-font-utils-7.5-21.amzn2.x86_64
+--> Running transaction check
+---> Package avahi-libs.x86_64 0:0.6.31-19.amzn2.0.1 will be installed
+---> Package dejavu-fonts-common.noarch 0:2.33-6.amzn2 will be installed
+---> Package fribidi.x86_64 0:1.0.2-1.amzn2.1 will be installed
+---> Package harfbuzz.x86_64 0:1.7.5-2.amzn2 will be installed
+--> Processing Dependency: libgraphite2.so.3()(64bit) for package: harfbuzz-1.7.5-2.amzn2.x86_64
+---> Package jasper-libs.x86_64 0:1.900.1-33.amzn2 will be installed
+---> Package libXau.x86_64 0:1.0.8-2.1.amzn2.0.2 will be installed
+---> Package libXft.x86_64 0:2.3.2-2.amzn2.0.2 will be installed
+---> Package libfontenc.x86_64 0:1.1.3-3.amzn2.0.2 will be installed
+---> Package libglvnd-egl.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 will be installed
+--> Processing Dependency: libglvnd(x86-64) = 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 for package: 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64
+--> Processing Dependency: mesa-libEGL(x86-64) >= 13.0.4-1 for package: 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64
+--> Processing Dependency: libGLdispatch.so.0()(64bit) for package: 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64
+---> Package libglvnd-glx.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 will be installed
+--> Processing Dependency: mesa-libGL(x86-64) >= 13.0.4-1 for package: 1:libglvnd-glx-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64
+---> Package libthai.x86_64 0:0.1.14-9.amzn2.0.2 will be installed
+---> Package libxslt.x86_64 0:1.1.28-5.amzn2.0.2 will be installed
+---> Package pixman.x86_64 0:0.34.0-1.amzn2.0.2 will be installed
+---> Package python-javapackages.noarch 0:3.4.1-11.amzn2 will be installed
+--> Processing Dependency: python-lxml for package: python-javapackages-3.4.1-11.amzn2.noarch
+--> Running transaction check
+---> Package graphite2.x86_64 0:1.3.10-1.amzn2.0.2 will be installed
+---> Package libglvnd.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 will be installed
+---> Package mesa-libEGL.x86_64 0:18.3.4-5.amzn2.0.1 will be installed
+--> Processing Dependency: mesa-libgbm = 18.3.4-5.amzn2.0.1 for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libxshmfence.so.1()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libwayland-server.so.0()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libwayland-client.so.0()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libglapi.so.0()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+--> Processing Dependency: libgbm.so.1()(64bit) for package: mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64
+---> Package mesa-libGL.x86_64 0:18.3.4-5.amzn2.0.1 will be installed
+--> Processing Dependency: libXxf86vm.so.1()(64bit) for package: mesa-libGL-18.3.4-5.amzn2.0.1.x86_64
+---> Package python-lxml.x86_64 0:3.2.1-4.amzn2.0.2 will be installed
+--> Running transaction check
+---> Package libXxf86vm.x86_64 0:1.1.4-1.amzn2.0.2 will be installed
+---> Package libwayland-client.x86_64 0:1.17.0-1.amzn2 will be installed
+---> Package libwayland-server.x86_64 0:1.17.0-1.amzn2 will be installed
+---> Package libxshmfence.x86_64 0:1.2-1.amzn2.0.2 will be installed
+---> Package mesa-libgbm.x86_64 0:18.3.4-5.amzn2.0.1 will be installed
+---> Package mesa-libglapi.x86_64 0:18.3.4-5.amzn2.0.1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================
+ Package                                         Arch                       Version                                                Repository                      Size
+========================================================================================================================================================================
+Installing:
+ java-1.8.0-openjdk                              x86_64                     1:1.8.0.252.b09-2.amzn2.0.1                            amzn2-core                     292 k
+Installing for dependencies:
+ alsa-lib                                        x86_64                     1.1.4.1-2.amzn2                                        amzn2-core                     425 k
+ atk                                             x86_64                     2.22.0-3.amzn2.0.2                                     amzn2-core                     258 k
+ avahi-libs                                      x86_64                     0.6.31-19.amzn2.0.1                                    amzn2-core                      61 k
+ cairo                                           x86_64                     1.15.12-4.amzn2                                        amzn2-core                     732 k
+ copy-jdk-configs                                noarch                     3.3-10.amzn2                                           amzn2-core                      21 k
+ cups-libs                                       x86_64                     1:1.6.3-40.amzn2                                       amzn2-core                     355 k
+ dejavu-fonts-common                             noarch                     2.33-6.amzn2                                           amzn2-core                      64 k
+ dejavu-sans-fonts                               noarch                     2.33-6.amzn2                                           amzn2-core                     1.4 M
+ fontconfig                                      x86_64                     2.13.0-4.3.amzn2                                       amzn2-core                     253 k
+ fontpackages-filesystem                         noarch                     1.44-8.amzn2                                           amzn2-core                      10 k
+ fribidi                                         x86_64                     1.0.2-1.amzn2.1                                        amzn2-core                      79 k
+ gdk-pixbuf2                                     x86_64                     2.36.12-3.amzn2                                        amzn2-core                     568 k
+ giflib                                          x86_64                     4.1.6-9.amzn2.0.2                                      amzn2-core                      40 k
+ graphite2                                       x86_64                     1.3.10-1.amzn2.0.2                                     amzn2-core                     115 k
+ gtk-update-icon-cache                           x86_64                     3.22.30-3.amzn2                                        amzn2-core                      26 k
+ gtk2                                            x86_64                     2.24.31-1.amzn2.0.2                                    amzn2-core                     3.4 M
+ harfbuzz                                        x86_64                     1.7.5-2.amzn2                                          amzn2-core                     279 k
+ hicolor-icon-theme                              noarch                     0.12-7.amzn2                                           amzn2-core                      43 k
+ jasper-libs                                     x86_64                     1.900.1-33.amzn2                                       amzn2-core                     150 k
+ java-1.8.0-openjdk-headless                     x86_64                     1:1.8.0.252.b09-2.amzn2.0.1                            amzn2-core                      32 M
+ javapackages-tools                              noarch                     3.4.1-11.amzn2                                         amzn2-core                      73 k
+ libICE                                          x86_64                     1.0.9-9.amzn2.0.2                                      amzn2-core                      67 k
+ libSM                                           x86_64                     1.2.2-2.amzn2.0.2                                      amzn2-core                      39 k
+ libX11                                          x86_64                     1.6.7-2.amzn2                                          amzn2-core                     614 k
+ libX11-common                                   noarch                     1.6.7-2.amzn2                                          amzn2-core                     164 k
+ libXau                                          x86_64                     1.0.8-2.1.amzn2.0.2                                    amzn2-core                      29 k
+ libXcomposite                                   x86_64                     0.4.4-4.1.amzn2.0.2                                    amzn2-core                      22 k
+ libXcursor                                      x86_64                     1.1.15-1.amzn2                                         amzn2-core                      30 k
+ libXdamage                                      x86_64                     1.1.4-4.1.amzn2.0.2                                    amzn2-core                      20 k
+ libXext                                         x86_64                     1.3.3-3.amzn2.0.2                                      amzn2-core                      39 k
+ libXfixes                                       x86_64                     5.0.3-1.amzn2.0.2                                      amzn2-core                      18 k
+ libXft                                          x86_64                     2.3.2-2.amzn2.0.2                                      amzn2-core                      60 k
+ libXi                                           x86_64                     1.7.9-1.amzn2.0.2                                      amzn2-core                      41 k
+ libXinerama                                     x86_64                     1.1.3-2.1.amzn2.0.2                                    amzn2-core                      14 k
+ libXrandr                                       x86_64                     1.5.1-2.amzn2.0.3                                      amzn2-core                      27 k
+ libXrender                                      x86_64                     0.9.10-1.amzn2.0.2                                     amzn2-core                      26 k
+ libXtst                                         x86_64                     1.2.3-1.amzn2.0.2                                      amzn2-core                      20 k
+ libXxf86vm                                      x86_64                     1.1.4-1.amzn2.0.2                                      amzn2-core                      17 k
+ libfontenc                                      x86_64                     1.1.3-3.amzn2.0.2                                      amzn2-core                      31 k
+ libglvnd                                        x86_64                     1:1.0.1-0.1.git5baa1e5.amzn2.0.1                       amzn2-core                      89 k
+ libglvnd-egl                                    x86_64                     1:1.0.1-0.1.git5baa1e5.amzn2.0.1                       amzn2-core                      43 k
+ libglvnd-glx                                    x86_64                     1:1.0.1-0.1.git5baa1e5.amzn2.0.1                       amzn2-core                     125 k
+ libthai                                         x86_64                     0.1.14-9.amzn2.0.2                                     amzn2-core                     187 k
+ libwayland-client                               x86_64                     1.17.0-1.amzn2                                         amzn2-core                      34 k
+ libwayland-server                               x86_64                     1.17.0-1.amzn2                                         amzn2-core                      40 k
+ libxcb                                          x86_64                     1.12-1.amzn2.0.2                                       amzn2-core                     216 k
+ libxshmfence                                    x86_64                     1.2-1.amzn2.0.2                                        amzn2-core                     7.2 k
+ libxslt                                         x86_64                     1.1.28-5.amzn2.0.2                                     amzn2-core                     243 k
+ lksctp-tools                                    x86_64                     1.0.17-2.amzn2.0.2                                     amzn2-core                      88 k
+ mesa-libEGL                                     x86_64                     18.3.4-5.amzn2.0.1                                     amzn2-core                     108 k
+ mesa-libGL                                      x86_64                     18.3.4-5.amzn2.0.1                                     amzn2-core                     162 k
+ mesa-libgbm                                     x86_64                     18.3.4-5.amzn2.0.1                                     amzn2-core                      38 k
+ mesa-libglapi                                   x86_64                     18.3.4-5.amzn2.0.1                                     amzn2-core                      45 k
+ pango                                           x86_64                     1.42.4-4.amzn2                                         amzn2-core                     280 k
+ pcsc-lite-libs                                  x86_64                     1.8.8-7.amzn2                                          amzn2-core                      35 k
+ pixman                                          x86_64                     0.34.0-1.amzn2.0.2                                     amzn2-core                     254 k
+ python-javapackages                             noarch                     3.4.1-11.amzn2                                         amzn2-core                      31 k
+ python-lxml                                     x86_64                     3.2.1-4.amzn2.0.2                                      amzn2-core                     1.0 M
+ ttmkfdir                                        x86_64                     3.0.9-42.amzn2.0.2                                     amzn2-core                      50 k
+ tzdata-java                                     noarch                     2020a-1.amzn2                                          amzn2-core                     188 k
+ xorg-x11-font-utils                             x86_64                     1:7.5-21.amzn2                                         amzn2-core                     103 k
+ xorg-x11-fonts-Type1                            noarch                     7.5-9.amzn2                                            amzn2-core                     521 k
+
+Transaction Summary
+========================================================================================================================================================================
+Install  1 Package (+62 Dependent packages)
+
+Total download size: 46 M
+Installed size: 151 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/63): atk-2.22.0-3.amzn2.0.2.x86_64.rpm                                                                                                        | 258 kB  00:00:00
+(2/63): alsa-lib-1.1.4.1-2.amzn2.x86_64.rpm                                                                                                      | 425 kB  00:00:00
+(3/63): avahi-libs-0.6.31-19.amzn2.0.1.x86_64.rpm                                                                                                |  61 kB  00:00:00
+(4/63): copy-jdk-configs-3.3-10.amzn2.noarch.rpm                                                                                                 |  21 kB  00:00:00
+(5/63): cairo-1.15.12-4.amzn2.x86_64.rpm                                                                                                         | 732 kB  00:00:00
+(6/63): cups-libs-1.6.3-40.amzn2.x86_64.rpm                                                                                                      | 355 kB  00:00:00
+(7/63): dejavu-fonts-common-2.33-6.amzn2.noarch.rpm                                                                                              |  64 kB  00:00:00
+(8/63): fontconfig-2.13.0-4.3.amzn2.x86_64.rpm                                                                                                   | 253 kB  00:00:00
+(9/63): dejavu-sans-fonts-2.33-6.amzn2.noarch.rpm                                                                                                | 1.4 MB  00:00:00
+(10/63): fontpackages-filesystem-1.44-8.amzn2.noarch.rpm                                                                                         |  10 kB  00:00:00
+(11/63): fribidi-1.0.2-1.amzn2.1.x86_64.rpm                                                                                                      |  79 kB  00:00:00
+(12/63): giflib-4.1.6-9.amzn2.0.2.x86_64.rpm                                                                                                     |  40 kB  00:00:00
+(13/63): graphite2-1.3.10-1.amzn2.0.2.x86_64.rpm                                                                                                 | 115 kB  00:00:00
+(14/63): gtk-update-icon-cache-3.22.30-3.amzn2.x86_64.rpm                                                                                        |  26 kB  00:00:00
+(15/63): gdk-pixbuf2-2.36.12-3.amzn2.x86_64.rpm                                                                                                  | 568 kB  00:00:00
+(16/63): gtk2-2.24.31-1.amzn2.0.2.x86_64.rpm                                                                                                     | 3.4 MB  00:00:00
+(17/63): hicolor-icon-theme-0.12-7.amzn2.noarch.rpm                                                                                              |  43 kB  00:00:00
+(18/63): jasper-libs-1.900.1-33.amzn2.x86_64.rpm                                                                                                 | 150 kB  00:00:00
+(19/63): java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64.rpm                                                                                 | 292 kB  00:00:00
+(20/63): harfbuzz-1.7.5-2.amzn2.x86_64.rpm                                                                                                       | 279 kB  00:00:00
+(21/63): javapackages-tools-3.4.1-11.amzn2.noarch.rpm                                                                                            |  73 kB  00:00:00
+(22/63): libICE-1.0.9-9.amzn2.0.2.x86_64.rpm                                                                                                     |  67 kB  00:00:00
+(23/63): libSM-1.2.2-2.amzn2.0.2.x86_64.rpm                                                                                                      |  39 kB  00:00:00
+(24/63): libX11-1.6.7-2.amzn2.x86_64.rpm                                                                                                         | 614 kB  00:00:00
+(25/63): libX11-common-1.6.7-2.amzn2.noarch.rpm                                                                                                  | 164 kB  00:00:00
+(26/63): libXau-1.0.8-2.1.amzn2.0.2.x86_64.rpm                                                                                                   |  29 kB  00:00:00
+(27/63): libXcomposite-0.4.4-4.1.amzn2.0.2.x86_64.rpm                                                                                            |  22 kB  00:00:00
+(28/63): libXcursor-1.1.15-1.amzn2.x86_64.rpm                                                                                                    |  30 kB  00:00:00
+(29/63): libXdamage-1.1.4-4.1.amzn2.0.2.x86_64.rpm                                                                                               |  20 kB  00:00:00
+(30/63): libXext-1.3.3-3.amzn2.0.2.x86_64.rpm                                                                                                    |  39 kB  00:00:00
+(31/63): libXfixes-5.0.3-1.amzn2.0.2.x86_64.rpm                                                                                                  |  18 kB  00:00:00
+(32/63): libXft-2.3.2-2.amzn2.0.2.x86_64.rpm                                                                                                     |  60 kB  00:00:00
+(33/63): java-1.8.0-openjdk-headless-1.8.0.252.b09-2.amzn2.0.1.x86_64.rpm                                                                        |  32 MB  00:00:00
+(34/63): libXi-1.7.9-1.amzn2.0.2.x86_64.rpm                                                                                                      |  41 kB  00:00:00
+(35/63): libXrandr-1.5.1-2.amzn2.0.3.x86_64.rpm                                                                                                  |  27 kB  00:00:00
+(36/63): libXinerama-1.1.3-2.1.amzn2.0.2.x86_64.rpm                                                                                              |  14 kB  00:00:00
+(37/63): libXrender-0.9.10-1.amzn2.0.2.x86_64.rpm                                                                                                |  26 kB  00:00:00
+(38/63): libXtst-1.2.3-1.amzn2.0.2.x86_64.rpm                                                                                                    |  20 kB  00:00:00
+(39/63): libXxf86vm-1.1.4-1.amzn2.0.2.x86_64.rpm                                                                                                 |  17 kB  00:00:00
+(40/63): libfontenc-1.1.3-3.amzn2.0.2.x86_64.rpm                                                                                                 |  31 kB  00:00:00
+(41/63): libglvnd-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64.rpm                                                                                      |  89 kB  00:00:00
+(42/63): libglvnd-glx-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64.rpm                                                                                  | 125 kB  00:00:00
+(43/63): libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64.rpm                                                                                  |  43 kB  00:00:00
+(44/63): libthai-0.1.14-9.amzn2.0.2.x86_64.rpm                                                                                                   | 187 kB  00:00:00
+(45/63): libwayland-client-1.17.0-1.amzn2.x86_64.rpm                                                                                             |  34 kB  00:00:00
+(46/63): libwayland-server-1.17.0-1.amzn2.x86_64.rpm                                                                                             |  40 kB  00:00:00
+(47/63): libxcb-1.12-1.amzn2.0.2.x86_64.rpm                                                                                                      | 216 kB  00:00:00
+(48/63): libxslt-1.1.28-5.amzn2.0.2.x86_64.rpm                                                                                                   | 243 kB  00:00:00
+(49/63): lksctp-tools-1.0.17-2.amzn2.0.2.x86_64.rpm                                                                                              |  88 kB  00:00:00
+(50/63): mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64.rpm                                                                                               | 108 kB  00:00:00
+(51/63): mesa-libGL-18.3.4-5.amzn2.0.1.x86_64.rpm                                                                                                | 162 kB  00:00:00
+(52/63): libxshmfence-1.2-1.amzn2.0.2.x86_64.rpm                                                                                                 | 7.2 kB  00:00:00
+(53/63): mesa-libgbm-18.3.4-5.amzn2.0.1.x86_64.rpm                                                                                               |  38 kB  00:00:00
+(54/63): mesa-libglapi-18.3.4-5.amzn2.0.1.x86_64.rpm                                                                                             |  45 kB  00:00:00
+(55/63): pcsc-lite-libs-1.8.8-7.amzn2.x86_64.rpm                                                                                                 |  35 kB  00:00:00
+(56/63): pango-1.42.4-4.amzn2.x86_64.rpm                                                                                                         | 280 kB  00:00:00
+(57/63): python-javapackages-3.4.1-11.amzn2.noarch.rpm                                                                                           |  31 kB  00:00:00
+(58/63): pixman-0.34.0-1.amzn2.0.2.x86_64.rpm                                                                                                    | 254 kB  00:00:00
+(59/63): ttmkfdir-3.0.9-42.amzn2.0.2.x86_64.rpm                                                                                                  |  50 kB  00:00:00
+(60/63): tzdata-java-2020a-1.amzn2.noarch.rpm                                                                                                    | 188 kB  00:00:00
+(61/63): python-lxml-3.2.1-4.amzn2.0.2.x86_64.rpm                                                                                                | 1.0 MB  00:00:00
+(62/63): xorg-x11-font-utils-7.5-21.amzn2.x86_64.rpm                                                                                             | 103 kB  00:00:00
+(63/63): xorg-x11-fonts-Type1-7.5-9.amzn2.noarch.rpm                                                                                             | 521 kB  00:00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                    25 MB/s |  46 MB  00:00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mesa-libglapi-18.3.4-5.amzn2.0.1.x86_64                                                                                                             1/63
+  Installing : libICE-1.0.9-9.amzn2.0.2.x86_64                                                                                                                     2/63
+  Installing : fontpackages-filesystem-1.44-8.amzn2.noarch                                                                                                         3/63
+  Installing : 1:libglvnd-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                                    4/63
+  Installing : libxshmfence-1.2-1.amzn2.0.2.x86_64                                                                                                                 5/63
+  Installing : libxslt-1.1.28-5.amzn2.0.2.x86_64                                                                                                                   6/63
+  Installing : libwayland-server-1.17.0-1.amzn2.x86_64                                                                                                             7/63
+  Installing : mesa-libgbm-18.3.4-5.amzn2.0.1.x86_64                                                                                                               8/63
+  Installing : python-lxml-3.2.1-4.amzn2.0.2.x86_64                                                                                                                9/63
+  Installing : python-javapackages-3.4.1-11.amzn2.noarch                                                                                                          10/63
+  Installing : javapackages-tools-3.4.1-11.amzn2.noarch                                                                                                           11/63
+  Installing : dejavu-fonts-common-2.33-6.amzn2.noarch                                                                                                            12/63
+  Installing : dejavu-sans-fonts-2.33-6.amzn2.noarch                                                                                                              13/63
+  Installing : fontconfig-2.13.0-4.3.amzn2.x86_64                                                                                                                 14/63
+  Installing : libSM-1.2.2-2.amzn2.0.2.x86_64                                                                                                                     15/63
+  Installing : avahi-libs-0.6.31-19.amzn2.0.1.x86_64                                                                                                              16/63
+  Installing : 1:cups-libs-1.6.3-40.amzn2.x86_64                                                                                                                  17/63
+  Installing : graphite2-1.3.10-1.amzn2.0.2.x86_64                                                                                                                18/63
+  Installing : harfbuzz-1.7.5-2.amzn2.x86_64                                                                                                                      19/63
+  Installing : libX11-common-1.6.7-2.amzn2.noarch                                                                                                                 20/63
+  Installing : alsa-lib-1.1.4.1-2.amzn2.x86_64                                                                                                                    21/63
+  Installing : copy-jdk-configs-3.3-10.amzn2.noarch                                                                                                               22/63
+  Installing : pcsc-lite-libs-1.8.8-7.amzn2.x86_64                                                                                                                23/63
+  Installing : fribidi-1.0.2-1.amzn2.1.x86_64                                                                                                                     24/63
+  Installing : libwayland-client-1.17.0-1.amzn2.x86_64                                                                                                            25/63
+  Installing : libfontenc-1.1.3-3.amzn2.0.2.x86_64                                                                                                                26/63
+  Installing : 1:xorg-x11-font-utils-7.5-21.amzn2.x86_64                                                                                                          27/63
+  Installing : hicolor-icon-theme-0.12-7.amzn2.noarch                                                                                                             28/63
+  Installing : atk-2.22.0-3.amzn2.0.2.x86_64                                                                                                                      29/63
+  Installing : libthai-0.1.14-9.amzn2.0.2.x86_64                                                                                                                  30/63
+  Installing : tzdata-java-2020a-1.amzn2.noarch                                                                                                                   31/63
+  Installing : libXau-1.0.8-2.1.amzn2.0.2.x86_64                                                                                                                  32/63
+  Installing : libxcb-1.12-1.amzn2.0.2.x86_64                                                                                                                     33/63
+  Installing : libX11-1.6.7-2.amzn2.x86_64                                                                                                                        34/63
+  Installing : libXext-1.3.3-3.amzn2.0.2.x86_64                                                                                                                   35/63
+  Installing : libXrender-0.9.10-1.amzn2.0.2.x86_64                                                                                                               36/63
+  Installing : libXfixes-5.0.3-1.amzn2.0.2.x86_64                                                                                                                 37/63
+  Installing : libXi-1.7.9-1.amzn2.0.2.x86_64                                                                                                                     38/63
+  Installing : libXdamage-1.1.4-4.1.amzn2.0.2.x86_64                                                                                                              39/63
+  Installing : libXcomposite-0.4.4-4.1.amzn2.0.2.x86_64                                                                                                           40/63
+  Installing : libXtst-1.2.3-1.amzn2.0.2.x86_64                                                                                                                   41/63
+  Installing : libXcursor-1.1.15-1.amzn2.x86_64                                                                                                                   42/63
+  Installing : libXrandr-1.5.1-2.amzn2.0.3.x86_64                                                                                                                 43/63
+  Installing : libXft-2.3.2-2.amzn2.0.2.x86_64                                                                                                                    44/63
+  Installing : libXinerama-1.1.3-2.1.amzn2.0.2.x86_64                                                                                                             45/63
+  Installing : libXxf86vm-1.1.4-1.amzn2.0.2.x86_64                                                                                                                46/63
+  Installing : 1:libglvnd-glx-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                               47/63
+  Installing : mesa-libGL-18.3.4-5.amzn2.0.1.x86_64                                                                                                               48/63
+  Installing : 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                               49/63
+  Installing : mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64                                                                                                              50/63
+  Installing : giflib-4.1.6-9.amzn2.0.2.x86_64                                                                                                                    51/63
+  Installing : jasper-libs-1.900.1-33.amzn2.x86_64                                                                                                                52/63
+  Installing : gdk-pixbuf2-2.36.12-3.amzn2.x86_64                                                                                                                 53/63
+  Installing : gtk-update-icon-cache-3.22.30-3.amzn2.x86_64                                                                                                       54/63
+  Installing : ttmkfdir-3.0.9-42.amzn2.0.2.x86_64                                                                                                                 55/63
+  Installing : xorg-x11-fonts-Type1-7.5-9.amzn2.noarch                                                                                                            56/63
+  Installing : lksctp-tools-1.0.17-2.amzn2.0.2.x86_64                                                                                                             57/63
+  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.amzn2.0.1.x86_64                                                                                     58/63
+  Installing : pixman-0.34.0-1.amzn2.0.2.x86_64                                                                                                                   59/63
+  Installing : cairo-1.15.12-4.amzn2.x86_64                                                                                                                       60/63
+  Installing : pango-1.42.4-4.amzn2.x86_64                                                                                                                        61/63
+  Installing : gtk2-2.24.31-1.amzn2.0.2.x86_64                                                                                                                    62/63
+  Installing : 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64                                                                                              63/63
+  Verifying  : libSM-1.2.2-2.amzn2.0.2.x86_64                                                                                                                      1/63
+  Verifying  : libwayland-server-1.17.0-1.amzn2.x86_64                                                                                                             2/63
+  Verifying  : libX11-1.6.7-2.amzn2.x86_64                                                                                                                         3/63
+  Verifying  : libxslt-1.1.28-5.amzn2.0.2.x86_64                                                                                                                   4/63
+  Verifying  : libxshmfence-1.2-1.amzn2.0.2.x86_64                                                                                                                 5/63
+  Verifying  : 1:xorg-x11-font-utils-7.5-21.amzn2.x86_64                                                                                                           6/63
+  Verifying  : 1:libglvnd-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                                    7/63
+  Verifying  : 1:libglvnd-egl-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                                8/63
+  Verifying  : fontpackages-filesystem-1.44-8.amzn2.noarch                                                                                                         9/63
+  Verifying  : mesa-libEGL-18.3.4-5.amzn2.0.1.x86_64                                                                                                              10/63
+  Verifying  : libXdamage-1.1.4-4.1.amzn2.0.2.x86_64                                                                                                              11/63
+  Verifying  : pango-1.42.4-4.amzn2.x86_64                                                                                                                        12/63
+  Verifying  : pixman-0.34.0-1.amzn2.0.2.x86_64                                                                                                                   13/63
+  Verifying  : libxcb-1.12-1.amzn2.0.2.x86_64                                                                                                                     14/63
+  Verifying  : libXrandr-1.5.1-2.amzn2.0.3.x86_64                                                                                                                 15/63
+  Verifying  : mesa-libGL-18.3.4-5.amzn2.0.1.x86_64                                                                                                               16/63
+  Verifying  : libXext-1.3.3-3.amzn2.0.2.x86_64                                                                                                                   17/63
+  Verifying  : mesa-libglapi-18.3.4-5.amzn2.0.1.x86_64                                                                                                            18/63
+  Verifying  : lksctp-tools-1.0.17-2.amzn2.0.2.x86_64                                                                                                             19/63
+  Verifying  : cairo-1.15.12-4.amzn2.x86_64                                                                                                                       20/63
+  Verifying  : libXcursor-1.1.15-1.amzn2.x86_64                                                                                                                   21/63
+  Verifying  : ttmkfdir-3.0.9-42.amzn2.0.2.x86_64                                                                                                                 22/63
+  Verifying  : python-lxml-3.2.1-4.amzn2.0.2.x86_64                                                                                                               23/63
+  Verifying  : gtk-update-icon-cache-3.22.30-3.amzn2.x86_64                                                                                                       24/63
+  Verifying  : libXcomposite-0.4.4-4.1.amzn2.0.2.x86_64                                                                                                           25/63
+  Verifying  : dejavu-fonts-common-2.33-6.amzn2.noarch                                                                                                            26/63
+  Verifying  : 1:cups-libs-1.6.3-40.amzn2.x86_64                                                                                                                  27/63
+  Verifying  : jasper-libs-1.900.1-33.amzn2.x86_64                                                                                                                28/63
+  Verifying  : libXau-1.0.8-2.1.amzn2.0.2.x86_64                                                                                                                  29/63
+  Verifying  : tzdata-java-2020a-1.amzn2.noarch                                                                                                                   30/63
+  Verifying  : libthai-0.1.14-9.amzn2.0.2.x86_64                                                                                                                  31/63
+  Verifying  : xorg-x11-fonts-Type1-7.5-9.amzn2.noarch                                                                                                            32/63
+  Verifying  : atk-2.22.0-3.amzn2.0.2.x86_64                                                                                                                      33/63
+  Verifying  : gtk2-2.24.31-1.amzn2.0.2.x86_64                                                                                                                    34/63
+  Verifying  : libXrender-0.9.10-1.amzn2.0.2.x86_64                                                                                                               35/63
+  Verifying  : 1:libglvnd-glx-1.0.1-0.1.git5baa1e5.amzn2.0.1.x86_64                                                                                               36/63
+  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.252.b09-2.amzn2.0.1.x86_64                                                                                     37/63
+  Verifying  : dejavu-sans-fonts-2.33-6.amzn2.noarch                                                                                                              38/63
+  Verifying  : fontconfig-2.13.0-4.3.amzn2.x86_64                                                                                                                 39/63
+  Verifying  : gdk-pixbuf2-2.36.12-3.amzn2.x86_64                                                                                                                 40/63
+  Verifying  : hicolor-icon-theme-0.12-7.amzn2.noarch                                                                                                             41/63
+  Verifying  : harfbuzz-1.7.5-2.amzn2.x86_64                                                                                                                      42/63
+  Verifying  : mesa-libgbm-18.3.4-5.amzn2.0.1.x86_64                                                                                                              43/63
+  Verifying  : giflib-4.1.6-9.amzn2.0.2.x86_64                                                                                                                    44/63
+  Verifying  : libXinerama-1.1.3-2.1.amzn2.0.2.x86_64                                                                                                             45/63
+  Verifying  : libXi-1.7.9-1.amzn2.0.2.x86_64                                                                                                                     46/63
+  Verifying  : libXxf86vm-1.1.4-1.amzn2.0.2.x86_64                                                                                                                47/63
+  Verifying  : libfontenc-1.1.3-3.amzn2.0.2.x86_64                                                                                                                48/63
+  Verifying  : libwayland-client-1.17.0-1.amzn2.x86_64                                                                                                            49/63
+  Verifying  : fribidi-1.0.2-1.amzn2.1.x86_64                                                                                                                     50/63
+  Verifying  : python-javapackages-3.4.1-11.amzn2.noarch                                                                                                          51/63
+  Verifying  : pcsc-lite-libs-1.8.8-7.amzn2.x86_64                                                                                                                52/63
+  Verifying  : libXtst-1.2.3-1.amzn2.0.2.x86_64                                                                                                                   53/63
+  Verifying  : libXft-2.3.2-2.amzn2.0.2.x86_64                                                                                                                    54/63
+  Verifying  : copy-jdk-configs-3.3-10.amzn2.noarch                                                                                                               55/63
+  Verifying  : alsa-lib-1.1.4.1-2.amzn2.x86_64                                                                                                                    56/63
+  Verifying  : 1:java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64                                                                                              57/63
+  Verifying  : libX11-common-1.6.7-2.amzn2.noarch                                                                                                                 58/63
+  Verifying  : libXfixes-5.0.3-1.amzn2.0.2.x86_64                                                                                                                 59/63
+  Verifying  : libICE-1.0.9-9.amzn2.0.2.x86_64                                                                                                                    60/63
+  Verifying  : graphite2-1.3.10-1.amzn2.0.2.x86_64                                                                                                                61/63
+  Verifying  : avahi-libs-0.6.31-19.amzn2.0.1.x86_64                                                                                                              62/63
+  Verifying  : javapackages-tools-3.4.1-11.amzn2.noarch                                                                                                           63/63
+
+Installed:
+  java-1.8.0-openjdk.x86_64 1:1.8.0.252.b09-2.amzn2.0.1
+
+Dependency Installed:
+  alsa-lib.x86_64 0:1.1.4.1-2.amzn2                atk.x86_64 0:2.22.0-3.amzn2.0.2                                avahi-libs.x86_64 0:0.6.31-19.amzn2.0.1
+  cairo.x86_64 0:1.15.12-4.amzn2                   copy-jdk-configs.noarch 0:3.3-10.amzn2                         cups-libs.x86_64 1:1.6.3-40.amzn2
+  dejavu-fonts-common.noarch 0:2.33-6.amzn2        dejavu-sans-fonts.noarch 0:2.33-6.amzn2                        fontconfig.x86_64 0:2.13.0-4.3.amzn2
+  fontpackages-filesystem.noarch 0:1.44-8.amzn2    fribidi.x86_64 0:1.0.2-1.amzn2.1                               gdk-pixbuf2.x86_64 0:2.36.12-3.amzn2
+  giflib.x86_64 0:4.1.6-9.amzn2.0.2                graphite2.x86_64 0:1.3.10-1.amzn2.0.2                          gtk-update-icon-cache.x86_64 0:3.22.30-3.amzn2
+  gtk2.x86_64 0:2.24.31-1.amzn2.0.2                harfbuzz.x86_64 0:1.7.5-2.amzn2                                hicolor-icon-theme.noarch 0:0.12-7.amzn2
+  jasper-libs.x86_64 0:1.900.1-33.amzn2            java-1.8.0-openjdk-headless.x86_64 1:1.8.0.252.b09-2.amzn2.0.1 javapackages-tools.noarch 0:3.4.1-11.amzn2
+  libICE.x86_64 0:1.0.9-9.amzn2.0.2                libSM.x86_64 0:1.2.2-2.amzn2.0.2                               libX11.x86_64 0:1.6.7-2.amzn2
+  libX11-common.noarch 0:1.6.7-2.amzn2             libXau.x86_64 0:1.0.8-2.1.amzn2.0.2                            libXcomposite.x86_64 0:0.4.4-4.1.amzn2.0.2
+  libXcursor.x86_64 0:1.1.15-1.amzn2               libXdamage.x86_64 0:1.1.4-4.1.amzn2.0.2                        libXext.x86_64 0:1.3.3-3.amzn2.0.2
+  libXfixes.x86_64 0:5.0.3-1.amzn2.0.2             libXft.x86_64 0:2.3.2-2.amzn2.0.2                              libXi.x86_64 0:1.7.9-1.amzn2.0.2
+  libXinerama.x86_64 0:1.1.3-2.1.amzn2.0.2         libXrandr.x86_64 0:1.5.1-2.amzn2.0.3                           libXrender.x86_64 0:0.9.10-1.amzn2.0.2
+  libXtst.x86_64 0:1.2.3-1.amzn2.0.2               libXxf86vm.x86_64 0:1.1.4-1.amzn2.0.2                          libfontenc.x86_64 0:1.1.3-3.amzn2.0.2
+  libglvnd.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1 libglvnd-egl.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1           libglvnd-glx.x86_64 1:1.0.1-0.1.git5baa1e5.amzn2.0.1
+  libthai.x86_64 0:0.1.14-9.amzn2.0.2              libwayland-client.x86_64 0:1.17.0-1.amzn2                      libwayland-server.x86_64 0:1.17.0-1.amzn2
+  libxcb.x86_64 0:1.12-1.amzn2.0.2                 libxshmfence.x86_64 0:1.2-1.amzn2.0.2                          libxslt.x86_64 0:1.1.28-5.amzn2.0.2
+  lksctp-tools.x86_64 0:1.0.17-2.amzn2.0.2         mesa-libEGL.x86_64 0:18.3.4-5.amzn2.0.1                        mesa-libGL.x86_64 0:18.3.4-5.amzn2.0.1
+  mesa-libgbm.x86_64 0:18.3.4-5.amzn2.0.1          mesa-libglapi.x86_64 0:18.3.4-5.amzn2.0.1                      pango.x86_64 0:1.42.4-4.amzn2
+  pcsc-lite-libs.x86_64 0:1.8.8-7.amzn2            pixman.x86_64 0:0.34.0-1.amzn2.0.2                             python-javapackages.noarch 0:3.4.1-11.amzn2
+  python-lxml.x86_64 0:3.2.1-4.amzn2.0.2           ttmkfdir.x86_64 0:3.0.9-42.amzn2.0.2                           tzdata-java.noarch 0:2020a-1.amzn2
+  xorg-x11-font-utils.x86_64 1:7.5-21.amzn2        xorg-x11-fonts-Type1.noarch 0:7.5-9.amzn2
+
+Complete!
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# java -version
+openjdk version "1.8.0_252"
+OpenJDK Runtime Environment (build 1.8.0_252-b09)
+OpenJDK 64-Bit Server VM (build 25.252-b09, mixed mode)
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# cd ~
+[root@ip-10-0-0-233 ~]# l -larth
+-bash: l: command not found
+[root@ip-10-0-0-233 ~]# ls -lrth
+total 0
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# ls -ala
+total 20
+dr-xr-x---  3 root root 103 Sep 13 10:09 .
+dr-xr-xr-x 18 root root 257 Sep 13 10:09 ..
+-rw-r--r--  1 root root  18 Oct 18  2017 .bash_logout
+-rw-r--r--  1 root root 176 Oct 18  2017 .bash_profile
+-rw-r--r--  1 root root 176 Oct 18  2017 .bashrc
+-rw-r--r--  1 root root 100 Oct 18  2017 .cshrc
+drwx------  2 root root  29 Sep 13 10:09 .ssh
+-rw-r--r--  1 root root 129 Oct 18  2017 .tcshrc
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# file $(which java)
+/bin/java: symbolic link to `/etc/alternatives/java'
+[root@ip-10-0-0-233 ~]# fiel /etc/alternatives/java
+-bash: fiel: command not found
+[root@ip-10-0-0-233 ~]# file /etc/alternatives/java
+/etc/alternatives/java: symbolic link to `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre/bin/java'
+[root@ip-10-0-0-233 ~]# ls /etc/alternatives/java
+/etc/alternatives/java
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# ls -la
+total 20
+dr-xr-x---  3 root root 103 Sep 13 10:09 .
+dr-xr-xr-x 18 root root 257 Sep 13 10:09 ..
+-rw-r--r--  1 root root  18 Oct 18  2017 .bash_logout
+-rw-r--r--  1 root root 176 Oct 18  2017 .bash_profile
+-rw-r--r--  1 root root 176 Oct 18  2017 .bashrc
+-rw-r--r--  1 root root 100 Oct 18  2017 .cshrc
+drwx------  2 root root  29 Sep 13 10:09 .ssh
+-rw-r--r--  1 root root 129 Oct 18  2017 .tcshrc
+[root@ip-10-0-0-233 ~]# vi .bash_profile
+[root@ip-10-0-0-233 ~]# vi .bash_profile
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# more .bash_
+more: stat of .bash_ failed: No such file or directory
+[root@ip-10-0-0-233 ~]# more .bash_profile
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+#JAVA ENV VARIABLE
+JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre"
+
+PATH=$JAVA_HOME/bin:$PATH
+
+export PATH
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# source .bash_profile
+[root@ip-10-0-0-233 ~]# echo $PATH
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/root/bin
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# echo $JAVA_HOME
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# top
+top - 10:23:08 up 13 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  85 total,   1 running,  48 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.5 sy,  0.0 ni, 99.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1006940 total,   352504 free,    73284 used,   581152 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   787900 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+ 3767 root      20   0  170988   4456   3792 R  0.5  0.4   0:00.01 top
+    1 root      20   0  125480   5240   3852 S  0.0  0.5   0:01.59 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H
+    5 root      20   0       0      0      0 I  0.0  0.0   0:00.08 kworker/u30:0
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.05 ksoftirqd/0
+    8 root      20   0       0      0      0 I  0.0  0.0   0:00.16 rcu_sched
+    9 root      20   0       0      0      0 I  0.0  0.0   0:00.00 rcu_bh
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 watchdog/0
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   15 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 netns
+   16 root      20   0       0      0      0 I  0.0  0.0   0:00.02 kworker/u30:1
+   21 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   22 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatch
+  172 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd
+  173 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper
+  174 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 writeback
+  176 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0
+  177 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd
+  178 root      39  19       0      0      0 S  0.0  0.0   0:00.00 khugepaged
+  179 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 crypto
+  180 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kintegrityd
+  182 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kblockd
+  535 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 md
+  538 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 edac-poller
+  543 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 watchdogd
+  684 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kauditd
+  690 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kswapd0
+  822 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kthrotld
+  872 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kstrp
+  900 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 ipv6_addrconf
+  932 root      20   0       0      0      0 I  0.0  0.0   0:00.04 kworker/0:2
+ 1739 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 ata_sff
+ 1746 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_0
+[root@ip-10-0-0-233 ~]# sudo yum list | grep -i tomcat
+tomcat.noarch                          7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-admin-webapps.noarch            7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-docs-webapp.noarch              7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-el-2.2-api.noarch               7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-javadoc.noarch                  7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-jsp-2.2-api.noarch              7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-jsvc.noarch                     7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-lib.noarch                      7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-servlet-3.0-api.noarch          7.0.76-10.amzn2.0.2            amzn2-core
+tomcat-webapps.noarch                  7.0.76-10.amzn2.0.2            amzn2-core
+tomcatjss.noarch                       7.2.1-8.amzn2.0.1              amzn2-core
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# sudo yum list | grep -i pache
+ant-apache-bcel.noarch                 1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-bsf.noarch                  1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-log4j.noarch                1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-oro.noarch                  1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-regexp.noarch               1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-resolver.noarch             1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-xalan2.noarch               1.9.2-9.amzn2.0.1              amzn2-core
+apache-commons-beanutils.noarch        1.8.3-15.amzn2                 amzn2-core
+apache-commons-beanutils-javadoc.noarch
+apache-commons-cli.noarch              1.2-13.amzn2                   amzn2-core
+apache-commons-cli-javadoc.noarch      1.2-13.amzn2                   amzn2-core
+apache-commons-codec.noarch            1.8-7.amzn2                    amzn2-core
+apache-commons-codec-javadoc.noarch    1.8-7.amzn2                    amzn2-core
+apache-commons-collections.noarch      3.2.1-22.amzn2                 amzn2-core
+apache-commons-collections-javadoc.noarch
+apache-commons-collections-testframework.noarch
+apache-commons-collections-testframework-javadoc.noarch
+apache-commons-compress.noarch         1.5-4.amzn2                    amzn2-core
+apache-commons-compress-javadoc.noarch 1.5-4.amzn2                    amzn2-core
+apache-commons-configuration.noarch    1.9-8.amzn2                    amzn2-core
+apache-commons-configuration-javadoc.noarch
+apache-commons-daemon.x86_64           1.0.13-7.amzn2                 amzn2-core
+apache-commons-daemon-javadoc.noarch   1.0.13-7.amzn2                 amzn2-core
+apache-commons-daemon-jsvc.x86_64      1.0.13-7.amzn2                 amzn2-core
+apache-commons-dbcp.noarch             1.4-17.amzn2                   amzn2-core
+apache-commons-dbcp-javadoc.noarch     1.4-17.amzn2                   amzn2-core
+apache-commons-digester.noarch         1.8.1-19.amzn2                 amzn2-core
+apache-commons-digester-javadoc.noarch 1.8.1-19.amzn2                 amzn2-core
+apache-commons-exec.noarch             1.1-11.amzn2                   amzn2-core
+apache-commons-exec-javadoc.noarch     1.1-11.amzn2                   amzn2-core
+apache-commons-io.noarch               1:2.4-12.amzn2                 amzn2-core
+apache-commons-io-javadoc.noarch       1:2.4-12.amzn2                 amzn2-core
+apache-commons-jexl.noarch             2.1.1-9.amzn2                  amzn2-core
+apache-commons-jexl-javadoc.noarch     2.1.1-9.amzn2                  amzn2-core
+apache-commons-jxpath.noarch           1.3-20.amzn2                   amzn2-core
+apache-commons-jxpath-javadoc.noarch   1.3-20.amzn2                   amzn2-core
+apache-commons-lang.noarch             2.6-15.amzn2                   amzn2-core
+apache-commons-lang-javadoc.noarch     2.6-15.amzn2                   amzn2-core
+apache-commons-lang3.noarch            3.1-9.amzn2                    amzn2-core
+apache-commons-lang3-javadoc.noarch    3.1-9.amzn2                    amzn2-core
+apache-commons-logging.noarch          1.1.2-7.amzn2                  amzn2-core
+apache-commons-logging-javadoc.noarch  1.1.2-7.amzn2                  amzn2-core
+apache-commons-net.noarch              3.2-8.amzn2                    amzn2-core
+apache-commons-net-javadoc.noarch      3.2-8.amzn2                    amzn2-core
+apache-commons-parent.noarch           26-8.amzn2                     amzn2-core
+apache-commons-pool.noarch             1.6-9.amzn2                    amzn2-core
+apache-commons-pool-javadoc.noarch     1.6-9.amzn2                    amzn2-core
+apache-commons-validator.noarch        1.4.0-8.amzn2                  amzn2-core
+apache-commons-validator-javadoc.noarch
+apache-commons-vfs.noarch              2.0-11.amzn2                   amzn2-core
+apache-commons-vfs-ant.noarch          2.0-11.amzn2                   amzn2-core
+apache-commons-vfs-examples.noarch     2.0-11.amzn2                   amzn2-core
+apache-commons-vfs-javadoc.noarch      2.0-11.amzn2                   amzn2-core
+apache-ivy.noarch                      2.3.0-4.amzn2                  amzn2-core
+apache-ivy-javadoc.noarch              2.3.0-4.amzn2                  amzn2-core
+apache-parent.noarch                   10-14.amzn2                    amzn2-core
+apache-rat.noarch                      0.8-13.amzn2                   amzn2-core
+apache-rat-core.noarch                 0.8-13.amzn2                   amzn2-core
+apache-rat-javadoc.noarch              0.8-13.amzn2                   amzn2-core
+apache-rat-plugin.noarch               0.8-13.amzn2                   amzn2-core
+apache-rat-tasks.noarch                0.8-13.amzn2                   amzn2-core
+apache-resource-bundles.noarch         2-11.amzn2                     amzn2-core
+pcp-pmda-apache.x86_64                 3.12.2-5.amzn2                 amzn2-core
+[root@ip-10-0-0-233 ~]# sudo yum list | grep -i apache
+[root@ip-10-0-0-233 ~]# sudo yum list | grep -i apache
+ant-apache-bcel.noarch                 1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-bsf.noarch                  1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-log4j.noarch                1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-oro.noarch                  1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-regexp.noarch               1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-resolver.noarch             1.9.2-9.amzn2.0.1              amzn2-core
+ant-apache-xalan2.noarch               1.9.2-9.amzn2.0.1              amzn2-core
+apache-commons-beanutils.noarch        1.8.3-15.amzn2                 amzn2-core
+apache-commons-beanutils-javadoc.noarch
+apache-commons-cli.noarch              1.2-13.amzn2                   amzn2-core
+apache-commons-cli-javadoc.noarch      1.2-13.amzn2                   amzn2-core
+apache-commons-codec.noarch            1.8-7.amzn2                    amzn2-core
+apache-commons-codec-javadoc.noarch    1.8-7.amzn2                    amzn2-core
+apache-commons-collections.noarch      3.2.1-22.amzn2                 amzn2-core
+apache-commons-collections-javadoc.noarch
+apache-commons-collections-testframework.noarch
+apache-commons-collections-testframework-javadoc.noarch
+apache-commons-compress.noarch         1.5-4.amzn2                    amzn2-core
+apache-commons-compress-javadoc.noarch 1.5-4.amzn2                    amzn2-core
+apache-commons-configuration.noarch    1.9-8.amzn2                    amzn2-core
+apache-commons-configuration-javadoc.noarch
+apache-commons-daemon.x86_64           1.0.13-7.amzn2                 amzn2-core
+apache-commons-daemon-javadoc.noarch   1.0.13-7.amzn2                 amzn2-core
+apache-commons-daemon-jsvc.x86_64      1.0.13-7.amzn2                 amzn2-core
+apache-commons-dbcp.noarch             1.4-17.amzn2                   amzn2-core
+apache-commons-dbcp-javadoc.noarch     1.4-17.amzn2                   amzn2-core
+apache-commons-digester.noarch         1.8.1-19.amzn2                 amzn2-core
+apache-commons-digester-javadoc.noarch 1.8.1-19.amzn2                 amzn2-core
+apache-commons-exec.noarch             1.1-11.amzn2                   amzn2-core
+apache-commons-exec-javadoc.noarch     1.1-11.amzn2                   amzn2-core
+apache-commons-io.noarch               1:2.4-12.amzn2                 amzn2-core
+apache-commons-io-javadoc.noarch       1:2.4-12.amzn2                 amzn2-core
+apache-commons-jexl.noarch             2.1.1-9.amzn2                  amzn2-core
+apache-commons-jexl-javadoc.noarch     2.1.1-9.amzn2                  amzn2-core
+apache-commons-jxpath.noarch           1.3-20.amzn2                   amzn2-core
+apache-commons-jxpath-javadoc.noarch   1.3-20.amzn2                   amzn2-core
+apache-commons-lang.noarch             2.6-15.amzn2                   amzn2-core
+apache-commons-lang-javadoc.noarch     2.6-15.amzn2                   amzn2-core
+apache-commons-lang3.noarch            3.1-9.amzn2                    amzn2-core
+apache-commons-lang3-javadoc.noarch    3.1-9.amzn2                    amzn2-core
+apache-commons-logging.noarch          1.1.2-7.amzn2                  amzn2-core
+apache-commons-logging-javadoc.noarch  1.1.2-7.amzn2                  amzn2-core
+apache-commons-net.noarch              3.2-8.amzn2                    amzn2-core
+apache-commons-net-javadoc.noarch      3.2-8.amzn2                    amzn2-core
+apache-commons-parent.noarch           26-8.amzn2                     amzn2-core
+apache-commons-pool.noarch             1.6-9.amzn2                    amzn2-core
+apache-commons-pool-javadoc.noarch     1.6-9.amzn2                    amzn2-core
+apache-commons-validator.noarch        1.4.0-8.amzn2                  amzn2-core
+apache-commons-validator-javadoc.noarch
+apache-commons-vfs.noarch              2.0-11.amzn2                   amzn2-core
+apache-commons-vfs-ant.noarch          2.0-11.amzn2                   amzn2-core
+apache-commons-vfs-examples.noarch     2.0-11.amzn2                   amzn2-core
+apache-commons-vfs-javadoc.noarch      2.0-11.amzn2                   amzn2-core
+apache-ivy.noarch                      2.3.0-4.amzn2                  amzn2-core
+apache-ivy-javadoc.noarch              2.3.0-4.amzn2                  amzn2-core
+apache-parent.noarch                   10-14.amzn2                    amzn2-core
+apache-rat.noarch                      0.8-13.amzn2                   amzn2-core
+apache-rat-core.noarch                 0.8-13.amzn2                   amzn2-core
+apache-rat-javadoc.noarch              0.8-13.amzn2                   amzn2-core
+apache-rat-plugin.noarch               0.8-13.amzn2                   amzn2-core
+apache-rat-tasks.noarch                0.8-13.amzn2                   amzn2-core
+apache-resource-bundles.noarch         2-11.amzn2                     amzn2-core
+pcp-pmda-apache.x86_64                 3.12.2-5.amzn2                 amzn2-core
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# java -version
+openjdk version "1.8.0_252"
+OpenJDK Runtime Environment (build 1.8.0_252-b09)
+OpenJDK 64-Bit Server VM (build 25.252-b09, mixed mode)
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# sudo yum list | grep -i apache-tomcat
+[root@ip-10-0-0-233 ~]# sudo yum list | grep -i "apache-tomcat"
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]#
+[root@ip-10-0-0-233 ~]# wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz
+--2020-09-13 10:25:41--  http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz
+Resolving apachemirror.wuchna.com (apachemirror.wuchna.com)... 159.65.154.237
+Connecting to apachemirror.wuchna.com (apachemirror.wuchna.com)|159.65.154.237|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10379806 (9.9M) [application/x-gzip]
+Saving to: ‘apache-tomcat-8.5.57.tar.gz’
+
+100%[==============================================================================================================================>] 10,379,806  2.45MB/s   in 4.0s
+
+2020-09-13 10:25:45 (2.45 MB/s) - ‘apache-tomcat-8.5.57.tar.gz’ saved [10379806/10379806]
+
+[root@ip-10-0-0-233 ~]# cd /opt
+[root@ip-10-0-0-233 opt]# ls -lrth
+total 0
+drwxr-xr-x 2 root root  6 Aug 16  2018 rh
+drwxr-xr-x 4 root root 33 Sep  4 00:49 aws
+[root@ip-10-0-0-233 opt]# wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz
+--2020-09-13 10:25:55--  http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz
+Resolving apachemirror.wuchna.com (apachemirror.wuchna.com)... 159.65.154.237
+Connecting to apachemirror.wuchna.com (apachemirror.wuchna.com)|159.65.154.237|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10379806 (9.9M) [application/x-gzip]
+Saving to: ‘apache-tomcat-8.5.57.tar.gz’
+
+100%[==============================================================================================================================>] 10,379,806  2.33MB/s   in 4.3s
+
+2020-09-13 10:26:00 (2.33 MB/s) - ‘apache-tomcat-8.5.57.tar.gz’ saved [10379806/10379806]
+
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]# ls -lrth
+total 10M
+drwxr-xr-x 2 root root    6 Aug 16  2018 rh
+-rw-r--r-- 1 root root 9.9M Jun 30 22:09 apache-tomcat-8.5.57.tar.gz
+drwxr-xr-x 4 root root   33 Sep  4 00:49 aws
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]# tar -zvxf apache-tomcat-8.5.57.tar.gz
+apache-tomcat-8.5.57/conf/
+apache-tomcat-8.5.57/conf/catalina.policy
+apache-tomcat-8.5.57/conf/catalina.properties
+apache-tomcat-8.5.57/conf/context.xml
+apache-tomcat-8.5.57/conf/jaspic-providers.xml
+apache-tomcat-8.5.57/conf/jaspic-providers.xsd
+apache-tomcat-8.5.57/conf/logging.properties
+apache-tomcat-8.5.57/conf/server.xml
+apache-tomcat-8.5.57/conf/tomcat-users.xml
+apache-tomcat-8.5.57/conf/tomcat-users.xsd
+apache-tomcat-8.5.57/conf/web.xml
+apache-tomcat-8.5.57/bin/
+apache-tomcat-8.5.57/lib/
+apache-tomcat-8.5.57/logs/
+apache-tomcat-8.5.57/temp/
+apache-tomcat-8.5.57/webapps/
+apache-tomcat-8.5.57/webapps/ROOT/
+apache-tomcat-8.5.57/webapps/ROOT/WEB-INF/
+apache-tomcat-8.5.57/webapps/docs/
+apache-tomcat-8.5.57/webapps/docs/WEB-INF/
+apache-tomcat-8.5.57/webapps/docs/annotationapi/
+apache-tomcat-8.5.57/webapps/docs/api/
+apache-tomcat-8.5.57/webapps/docs/appdev/
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/docs/
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/src/
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/src/mypackage/
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/web/
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/web/WEB-INF/
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/web/images/
+apache-tomcat-8.5.57/webapps/docs/architecture/
+apache-tomcat-8.5.57/webapps/docs/architecture/requestProcess/
+apache-tomcat-8.5.57/webapps/docs/architecture/startup/
+apache-tomcat-8.5.57/webapps/docs/config/
+apache-tomcat-8.5.57/webapps/docs/elapi/
+apache-tomcat-8.5.57/webapps/docs/funcspecs/
+apache-tomcat-8.5.57/webapps/docs/images/
+apache-tomcat-8.5.57/webapps/docs/images/fonts/
+apache-tomcat-8.5.57/webapps/docs/jaspicapi/
+apache-tomcat-8.5.57/webapps/docs/jspapi/
+apache-tomcat-8.5.57/webapps/docs/servletapi/
+apache-tomcat-8.5.57/webapps/docs/tribes/
+apache-tomcat-8.5.57/webapps/docs/websocketapi/
+apache-tomcat-8.5.57/webapps/examples/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/checkbox/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/colors/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/dates/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/error/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/filters/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/el/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/listeners/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/num/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/sessions/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/util/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/validators/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/chat/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/jsp/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/jsp2/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/jsp/applet/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/lib/
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/tags/
+apache-tomcat-8.5.57/webapps/examples/jsp/
+apache-tomcat-8.5.57/webapps/examples/jsp/async/
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/
+apache-tomcat-8.5.57/webapps/examples/jsp/checkbox/
+apache-tomcat-8.5.57/webapps/examples/jsp/colors/
+apache-tomcat-8.5.57/webapps/examples/jsp/dates/
+apache-tomcat-8.5.57/webapps/examples/jsp/error/
+apache-tomcat-8.5.57/webapps/examples/jsp/forward/
+apache-tomcat-8.5.57/webapps/examples/jsp/images/
+apache-tomcat-8.5.57/webapps/examples/jsp/include/
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/
+apache-tomcat-8.5.57/webapps/examples/jsp/jsptoserv/
+apache-tomcat-8.5.57/webapps/examples/jsp/num/
+apache-tomcat-8.5.57/webapps/examples/jsp/plugin/
+apache-tomcat-8.5.57/webapps/examples/jsp/plugin/applet/
+apache-tomcat-8.5.57/webapps/examples/jsp/security/
+apache-tomcat-8.5.57/webapps/examples/jsp/security/protected/
+apache-tomcat-8.5.57/webapps/examples/jsp/sessions/
+apache-tomcat-8.5.57/webapps/examples/jsp/simpletag/
+apache-tomcat-8.5.57/webapps/examples/jsp/snp/
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/
+apache-tomcat-8.5.57/webapps/examples/jsp/xml/
+apache-tomcat-8.5.57/webapps/examples/servlets/
+apache-tomcat-8.5.57/webapps/examples/servlets/images/
+apache-tomcat-8.5.57/webapps/examples/servlets/nonblocking/
+apache-tomcat-8.5.57/webapps/examples/websocket/
+apache-tomcat-8.5.57/webapps/host-manager/
+apache-tomcat-8.5.57/webapps/host-manager/META-INF/
+apache-tomcat-8.5.57/webapps/host-manager/WEB-INF/
+apache-tomcat-8.5.57/webapps/host-manager/WEB-INF/jsp/
+apache-tomcat-8.5.57/webapps/host-manager/images/
+apache-tomcat-8.5.57/webapps/manager/
+apache-tomcat-8.5.57/webapps/manager/META-INF/
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/
+apache-tomcat-8.5.57/webapps/manager/images/
+apache-tomcat-8.5.57/work/
+apache-tomcat-8.5.57/BUILDING.txt
+apache-tomcat-8.5.57/CONTRIBUTING.md
+apache-tomcat-8.5.57/LICENSE
+apache-tomcat-8.5.57/NOTICE
+apache-tomcat-8.5.57/README.md
+apache-tomcat-8.5.57/RELEASE-NOTES
+apache-tomcat-8.5.57/RUNNING.txt
+apache-tomcat-8.5.57/bin/bootstrap.jar
+apache-tomcat-8.5.57/bin/catalina-tasks.xml
+apache-tomcat-8.5.57/bin/catalina.bat
+apache-tomcat-8.5.57/bin/ciphers.bat
+apache-tomcat-8.5.57/bin/commons-daemon-native.tar.gz
+apache-tomcat-8.5.57/bin/commons-daemon.jar
+apache-tomcat-8.5.57/bin/configtest.bat
+apache-tomcat-8.5.57/bin/digest.bat
+apache-tomcat-8.5.57/bin/setclasspath.bat
+apache-tomcat-8.5.57/bin/shutdown.bat
+apache-tomcat-8.5.57/bin/startup.bat
+apache-tomcat-8.5.57/bin/tomcat-juli.jar
+apache-tomcat-8.5.57/bin/tomcat-native.tar.gz
+apache-tomcat-8.5.57/bin/tool-wrapper.bat
+apache-tomcat-8.5.57/bin/version.bat
+apache-tomcat-8.5.57/lib/annotations-api.jar
+apache-tomcat-8.5.57/lib/catalina-ant.jar
+apache-tomcat-8.5.57/lib/catalina-ha.jar
+apache-tomcat-8.5.57/lib/catalina-storeconfig.jar
+apache-tomcat-8.5.57/lib/catalina-tribes.jar
+apache-tomcat-8.5.57/lib/catalina.jar
+apache-tomcat-8.5.57/lib/ecj-4.6.3.jar
+apache-tomcat-8.5.57/lib/el-api.jar
+apache-tomcat-8.5.57/lib/jasper-el.jar
+apache-tomcat-8.5.57/lib/jasper.jar
+apache-tomcat-8.5.57/lib/jaspic-api.jar
+apache-tomcat-8.5.57/lib/jsp-api.jar
+apache-tomcat-8.5.57/lib/servlet-api.jar
+apache-tomcat-8.5.57/lib/tomcat-api.jar
+apache-tomcat-8.5.57/lib/tomcat-coyote.jar
+apache-tomcat-8.5.57/lib/tomcat-dbcp.jar
+apache-tomcat-8.5.57/lib/tomcat-i18n-de.jar
+apache-tomcat-8.5.57/lib/tomcat-i18n-es.jar
+apache-tomcat-8.5.57/lib/tomcat-i18n-fr.jar
+apache-tomcat-8.5.57/lib/tomcat-i18n-ja.jar
+apache-tomcat-8.5.57/lib/tomcat-i18n-ko.jar
+apache-tomcat-8.5.57/lib/tomcat-i18n-ru.jar
+apache-tomcat-8.5.57/lib/tomcat-i18n-zh-CN.jar
+apache-tomcat-8.5.57/lib/tomcat-jdbc.jar
+apache-tomcat-8.5.57/lib/tomcat-jni.jar
+apache-tomcat-8.5.57/lib/tomcat-util-scan.jar
+apache-tomcat-8.5.57/lib/tomcat-util.jar
+apache-tomcat-8.5.57/lib/tomcat-websocket.jar
+apache-tomcat-8.5.57/lib/websocket-api.jar
+apache-tomcat-8.5.57/temp/safeToDelete.tmp
+apache-tomcat-8.5.57/webapps/ROOT/RELEASE-NOTES.txt
+apache-tomcat-8.5.57/webapps/ROOT/WEB-INF/web.xml
+apache-tomcat-8.5.57/webapps/ROOT/asf-logo-wide.svg
+apache-tomcat-8.5.57/webapps/ROOT/bg-button.png
+apache-tomcat-8.5.57/webapps/ROOT/bg-middle.png
+apache-tomcat-8.5.57/webapps/ROOT/bg-nav.png
+apache-tomcat-8.5.57/webapps/ROOT/bg-upper.png
+apache-tomcat-8.5.57/webapps/ROOT/favicon.ico
+apache-tomcat-8.5.57/webapps/ROOT/index.jsp
+apache-tomcat-8.5.57/webapps/ROOT/tomcat-power.gif
+apache-tomcat-8.5.57/webapps/ROOT/tomcat.css
+apache-tomcat-8.5.57/webapps/ROOT/tomcat.gif
+apache-tomcat-8.5.57/webapps/ROOT/tomcat.png
+apache-tomcat-8.5.57/webapps/ROOT/tomcat.svg
+apache-tomcat-8.5.57/webapps/docs/BUILDING.txt
+apache-tomcat-8.5.57/webapps/docs/RELEASE-NOTES.txt
+apache-tomcat-8.5.57/webapps/docs/RUNNING.txt
+apache-tomcat-8.5.57/webapps/docs/WEB-INF/web.xml
+apache-tomcat-8.5.57/webapps/docs/aio.html
+apache-tomcat-8.5.57/webapps/docs/annotationapi/index.html
+apache-tomcat-8.5.57/webapps/docs/api/index.html
+apache-tomcat-8.5.57/webapps/docs/appdev/build.xml.txt
+apache-tomcat-8.5.57/webapps/docs/appdev/deployment.html
+apache-tomcat-8.5.57/webapps/docs/appdev/index.html
+apache-tomcat-8.5.57/webapps/docs/appdev/installation.html
+apache-tomcat-8.5.57/webapps/docs/appdev/introduction.html
+apache-tomcat-8.5.57/webapps/docs/appdev/processes.html
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/build.xml
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/docs/README.txt
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/index.html
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/sample.war
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/src/mypackage/Hello.java
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/web/WEB-INF/web.xml
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/web/hello.jsp
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/web/images/tomcat.gif
+apache-tomcat-8.5.57/webapps/docs/appdev/sample/web/index.html
+apache-tomcat-8.5.57/webapps/docs/appdev/source.html
+apache-tomcat-8.5.57/webapps/docs/appdev/web.xml.txt
+apache-tomcat-8.5.57/webapps/docs/apr.html
+apache-tomcat-8.5.57/webapps/docs/architecture/index.html
+apache-tomcat-8.5.57/webapps/docs/architecture/overview.html
+apache-tomcat-8.5.57/webapps/docs/architecture/requestProcess.html
+apache-tomcat-8.5.57/webapps/docs/architecture/requestProcess/authentication-process.png
+apache-tomcat-8.5.57/webapps/docs/architecture/requestProcess/request-process.png
+apache-tomcat-8.5.57/webapps/docs/architecture/startup.html
+apache-tomcat-8.5.57/webapps/docs/architecture/startup/serverStartup.pdf
+apache-tomcat-8.5.57/webapps/docs/architecture/startup/serverStartup.txt
+apache-tomcat-8.5.57/webapps/docs/balancer-howto.html
+apache-tomcat-8.5.57/webapps/docs/building.html
+apache-tomcat-8.5.57/webapps/docs/cgi-howto.html
+apache-tomcat-8.5.57/webapps/docs/changelog.html
+apache-tomcat-8.5.57/webapps/docs/class-loader-howto.html
+apache-tomcat-8.5.57/webapps/docs/cluster-howto.html
+apache-tomcat-8.5.57/webapps/docs/comments.html
+apache-tomcat-8.5.57/webapps/docs/config/ajp.html
+apache-tomcat-8.5.57/webapps/docs/config/automatic-deployment.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-channel.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-deployer.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-interceptor.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-listener.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-manager.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-membership.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-receiver.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-sender.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster-valve.html
+apache-tomcat-8.5.57/webapps/docs/config/cluster.html
+apache-tomcat-8.5.57/webapps/docs/config/context.html
+apache-tomcat-8.5.57/webapps/docs/config/cookie-processor.html
+apache-tomcat-8.5.57/webapps/docs/config/credentialhandler.html
+apache-tomcat-8.5.57/webapps/docs/config/engine.html
+apache-tomcat-8.5.57/webapps/docs/config/executor.html
+apache-tomcat-8.5.57/webapps/docs/config/filter.html
+apache-tomcat-8.5.57/webapps/docs/config/globalresources.html
+apache-tomcat-8.5.57/webapps/docs/config/host.html
+apache-tomcat-8.5.57/webapps/docs/config/http.html
+apache-tomcat-8.5.57/webapps/docs/config/http2.html
+apache-tomcat-8.5.57/webapps/docs/config/index.html
+apache-tomcat-8.5.57/webapps/docs/config/jar-scan-filter.html
+apache-tomcat-8.5.57/webapps/docs/config/jar-scanner.html
+apache-tomcat-8.5.57/webapps/docs/config/jaspic.html
+apache-tomcat-8.5.57/webapps/docs/config/listeners.html
+apache-tomcat-8.5.57/webapps/docs/config/loader.html
+apache-tomcat-8.5.57/webapps/docs/config/manager.html
+apache-tomcat-8.5.57/webapps/docs/config/realm.html
+apache-tomcat-8.5.57/webapps/docs/config/resources.html
+apache-tomcat-8.5.57/webapps/docs/config/server.html
+apache-tomcat-8.5.57/webapps/docs/config/service.html
+apache-tomcat-8.5.57/webapps/docs/config/sessionidgenerator.html
+apache-tomcat-8.5.57/webapps/docs/config/systemprops.html
+apache-tomcat-8.5.57/webapps/docs/config/valve.html
+apache-tomcat-8.5.57/webapps/docs/connectors.html
+apache-tomcat-8.5.57/webapps/docs/default-servlet.html
+apache-tomcat-8.5.57/webapps/docs/deployer-howto.html
+apache-tomcat-8.5.57/webapps/docs/developers.html
+apache-tomcat-8.5.57/webapps/docs/elapi/index.html
+apache-tomcat-8.5.57/webapps/docs/extras.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/fs-admin-apps.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/fs-admin-objects.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/fs-admin-opers.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/fs-default.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/fs-jdbc-realm.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/fs-jndi-realm.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/fs-memory-realm.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/index.html
+apache-tomcat-8.5.57/webapps/docs/funcspecs/mbean-names.html
+apache-tomcat-8.5.57/webapps/docs/host-manager-howto.html
+apache-tomcat-8.5.57/webapps/docs/html-host-manager-howto.html
+apache-tomcat-8.5.57/webapps/docs/html-manager-howto.html
+apache-tomcat-8.5.57/webapps/docs/images/add.gif
+apache-tomcat-8.5.57/webapps/docs/images/asf-logo.svg
+apache-tomcat-8.5.57/webapps/docs/images/code.gif
+apache-tomcat-8.5.57/webapps/docs/images/cors-flowchart.png
+apache-tomcat-8.5.57/webapps/docs/images/design.gif
+apache-tomcat-8.5.57/webapps/docs/images/docs-stylesheet.css
+apache-tomcat-8.5.57/webapps/docs/images/docs.gif
+apache-tomcat-8.5.57/webapps/docs/images/fix.gif
+apache-tomcat-8.5.57/webapps/docs/images/fonts/OpenSans400.woff
+apache-tomcat-8.5.57/webapps/docs/images/fonts/OpenSans400italic.woff
+apache-tomcat-8.5.57/webapps/docs/images/fonts/OpenSans600.woff
+apache-tomcat-8.5.57/webapps/docs/images/fonts/OpenSans600italic.woff
+apache-tomcat-8.5.57/webapps/docs/images/fonts/OpenSans700.woff
+apache-tomcat-8.5.57/webapps/docs/images/fonts/OpenSans700italic.woff
+apache-tomcat-8.5.57/webapps/docs/images/fonts/fonts.css
+apache-tomcat-8.5.57/webapps/docs/images/tomcat.gif
+apache-tomcat-8.5.57/webapps/docs/images/tomcat.png
+apache-tomcat-8.5.57/webapps/docs/images/update.gif
+apache-tomcat-8.5.57/webapps/docs/images/void.gif
+apache-tomcat-8.5.57/webapps/docs/index.html
+apache-tomcat-8.5.57/webapps/docs/introduction.html
+apache-tomcat-8.5.57/webapps/docs/jasper-howto.html
+apache-tomcat-8.5.57/webapps/docs/jaspicapi/index.html
+apache-tomcat-8.5.57/webapps/docs/jdbc-pool.html
+apache-tomcat-8.5.57/webapps/docs/jndi-datasource-examples-howto.html
+apache-tomcat-8.5.57/webapps/docs/jndi-resources-howto.html
+apache-tomcat-8.5.57/webapps/docs/jspapi/index.html
+apache-tomcat-8.5.57/webapps/docs/logging.html
+apache-tomcat-8.5.57/webapps/docs/manager-howto.html
+apache-tomcat-8.5.57/webapps/docs/maven-jars.html
+apache-tomcat-8.5.57/webapps/docs/mbeans-descriptors-howto.html
+apache-tomcat-8.5.57/webapps/docs/mbeans-descriptors.dtd
+apache-tomcat-8.5.57/webapps/docs/monitoring.html
+apache-tomcat-8.5.57/webapps/docs/proxy-howto.html
+apache-tomcat-8.5.57/webapps/docs/realm-howto.html
+apache-tomcat-8.5.57/webapps/docs/rewrite.html
+apache-tomcat-8.5.57/webapps/docs/security-howto.html
+apache-tomcat-8.5.57/webapps/docs/security-manager-howto.html
+apache-tomcat-8.5.57/webapps/docs/servletapi/index.html
+apache-tomcat-8.5.57/webapps/docs/setup.html
+apache-tomcat-8.5.57/webapps/docs/ssi-howto.html
+apache-tomcat-8.5.57/webapps/docs/ssl-howto.html
+apache-tomcat-8.5.57/webapps/docs/tribes/developers.html
+apache-tomcat-8.5.57/webapps/docs/tribes/faq.html
+apache-tomcat-8.5.57/webapps/docs/tribes/interceptors.html
+apache-tomcat-8.5.57/webapps/docs/tribes/introduction.html
+apache-tomcat-8.5.57/webapps/docs/tribes/membership.html
+apache-tomcat-8.5.57/webapps/docs/tribes/setup.html
+apache-tomcat-8.5.57/webapps/docs/tribes/status.html
+apache-tomcat-8.5.57/webapps/docs/tribes/transport.html
+apache-tomcat-8.5.57/webapps/docs/virtual-hosting-howto.html
+apache-tomcat-8.5.57/webapps/docs/web-socket-howto.html
+apache-tomcat-8.5.57/webapps/docs/websocketapi/index.html
+apache-tomcat-8.5.57/webapps/docs/windows-auth-howto.html
+apache-tomcat-8.5.57/webapps/docs/windows-service-howto.html
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/CookieExample.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/CookieExample.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/HelloWorldExample.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/HelloWorldExample.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings_de.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings_es.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings_fr.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings_ja.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings_ko.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings_pt.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings_ru.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/LocalStrings_zh_CN.properties
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/RequestHeaderExample.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/RequestHeaderExample.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/RequestInfoExample.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/RequestInfoExample.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/RequestParamExample.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/RequestParamExample.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/ServletToJsp.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/ServletToJsp.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/SessionExample.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/SessionExample.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async0$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async0.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async0.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async1$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async1.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async2$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async2.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async2.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async3.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Async3.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Stockticker$Stock.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Stockticker$TickListener.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Stockticker.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/async/Stockticker.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/Entries.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/Entries.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/Entry.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/Entry.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/JspCalendar.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/JspCalendar.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/TableBean.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/cal/TableBean.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/checkbox/CheckTest.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/checkbox/CheckTest.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/colors/ColorGameBean.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/colors/ColorGameBean.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilter.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilter.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilterTestServlet.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilterTestServlet.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/CompressionResponseStream.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/CompressionResponseStream.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/CompressionServletResponseWrapper.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/compressionFilters/CompressionServletResponseWrapper.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/dates/JspCalendar.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/dates/JspCalendar.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/error/Smart.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/error/Smart.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/ExampleTagBase.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/ExampleTagBase.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/FooTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/FooTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/LogTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/LogTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/ValuesTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/examples/ValuesTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/filters/ExampleFilter.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/filters/ExampleFilter.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/BookBean.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/BookBean.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/FooBean.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/FooBean.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/ValuesBean.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/ValuesBean.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/el/Functions.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/el/Functions.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/EchoAttributesTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/EchoAttributesTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/FindBookSimpleTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/FindBookSimpleTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/HelloWorldSimpleTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/HelloWorldSimpleTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/RepeatSimpleTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/RepeatSimpleTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/ShuffleSimpleTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/ShuffleSimpleTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/TileSimpleTag.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/TileSimpleTag.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/listeners/ContextListener.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/listeners/ContextListener.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/listeners/SessionListener.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/listeners/SessionListener.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter$CounterListener.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter$NumberWriterListener.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/num/NumberGuessBean.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/num/NumberGuessBean.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/sessions/DummyCart.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/sessions/DummyCart.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/util/CookieFilter.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/util/CookieFilter.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/util/HTMLFilter.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/util/HTMLFilter.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/validators/DebugValidator.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/validators/DebugValidator.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/ExamplesConfig.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/ExamplesConfig.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/chat/ChatAnnotation.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/chat/ChatAnnotation.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Client$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Client.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Client.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage$ParseException.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardContextListener.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardContextListener.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$2.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$3$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$3.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$1$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$2.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$MessageType.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$Player.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Room.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/Room.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/AbstractWebsocketMessage.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/AbstractWebsocketMessage.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/BinaryWebsocketMessage.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/BinaryWebsocketMessage.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/CloseWebsocketMessage.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/CloseWebsocketMessage.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/StringWebsocketMessage.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/StringWebsocketMessage.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoAnnotation.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoAnnotation.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation$CompletedFuture.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandlerBinary.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandlerText.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoStreamAnnotation.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/EchoStreamAnnotation.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/echo/servers.json
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/Direction.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/Direction.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/Location$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/Location.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/Location.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/Snake.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/Snake.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/SnakeAnnotation.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/SnakeAnnotation.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer$1.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.class
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/jsp2/jsp2-example-taglib.tld
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/jsp/applet/Clock2.java
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/jsp/debug-taglib.tld
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/jsp/example-taglib.tld
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/tags/displayProducts.tag
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/tags/helloWorld.tag
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/tags/panel.tag
+apache-tomcat-8.5.57/webapps/examples/WEB-INF/web.xml
+apache-tomcat-8.5.57/webapps/examples/index.html
+apache-tomcat-8.5.57/webapps/examples/jsp/async/async1.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/async/async1.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/async/async3.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/async/async3.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/async/index.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/async/index.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/Entries.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/Entry.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/JspCalendar.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/TableBean.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/cal1.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/cal1.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/cal2.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/cal2.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/calendar.html
+apache-tomcat-8.5.57/webapps/examples/jsp/cal/login.html
+apache-tomcat-8.5.57/webapps/examples/jsp/checkbox/CheckTest.html
+apache-tomcat-8.5.57/webapps/examples/jsp/checkbox/check.html
+apache-tomcat-8.5.57/webapps/examples/jsp/checkbox/checkresult.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/checkbox/checkresult.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/checkbox/cresult.html
+apache-tomcat-8.5.57/webapps/examples/jsp/colors/ColorGameBean.html
+apache-tomcat-8.5.57/webapps/examples/jsp/colors/clr.html
+apache-tomcat-8.5.57/webapps/examples/jsp/colors/colors.html
+apache-tomcat-8.5.57/webapps/examples/jsp/colors/colrs.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/colors/colrs.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/dates/date.html
+apache-tomcat-8.5.57/webapps/examples/jsp/dates/date.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/dates/date.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/error/er.html
+apache-tomcat-8.5.57/webapps/examples/jsp/error/err.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/error/err.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/error/error.html
+apache-tomcat-8.5.57/webapps/examples/jsp/error/errorpge.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/error/errorpge.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/forward/forward.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/forward/forward.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/forward/fwd.html
+apache-tomcat-8.5.57/webapps/examples/jsp/forward/one.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/forward/one.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/forward/two.html
+apache-tomcat-8.5.57/webapps/examples/jsp/images/code.gif
+apache-tomcat-8.5.57/webapps/examples/jsp/images/execute.gif
+apache-tomcat-8.5.57/webapps/examples/jsp/images/return.gif
+apache-tomcat-8.5.57/webapps/examples/jsp/include/foo.html
+apache-tomcat-8.5.57/webapps/examples/jsp/include/foo.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/include/foo.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/include/inc.html
+apache-tomcat-8.5.57/webapps/examples/jsp/include/include.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/include/include.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/index.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/Functions.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/ValuesBean.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/ValuesTag.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/basic-arithmetic.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/basic-arithmetic.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/basic-arithmetic.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/basic-comparisons.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/basic-comparisons.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/basic-comparisons.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/composite.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/composite.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/composite.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/functions.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/functions.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/functions.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/implicit-objects.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/implicit-objects.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/el/implicit-objects.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/FooBean.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/HelloWorldSimpleTag.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/ShuffleSimpleTag.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/TileSimpleTag.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/jspattribute.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/jspattribute.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/jspattribute.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/shuffle.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/shuffle.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspattribute/shuffle.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/basic.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/basic.jspx
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/basic.jspx.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/svgexample.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/textRotate.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/textRotate.jpg
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/textRotate.jspx
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/jspx/textRotate.jspx.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/EchoAttributesTag.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/coda.jspf
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/coda.jspf.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/config.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/config.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/config.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/dynamicattrs.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/dynamicattrs.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/dynamicattrs.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/prelude.jspf
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/misc/prelude.jspf.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/BookBean.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/FindBookSimpleTag.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/Functions.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/HelloWorldSimpleTag.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/RepeatSimpleTag.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/book.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/book.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/book.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/hello.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/hello.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/hello.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/repeat.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/repeat.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/simpletag/repeat.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/displayProducts.tag.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/hello.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/hello.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/hello.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/helloWorld.tag.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/panel.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/panel.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/panel.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/panel.tag.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/products.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/products.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsp2/tagfiles/products.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsptoserv/ServletToJsp.java.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsptoserv/hello.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsptoserv/hello.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsptoserv/jsptoservlet.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/jsptoserv/jsptoservlet.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/jsptoserv/jts.html
+apache-tomcat-8.5.57/webapps/examples/jsp/num/numguess.html
+apache-tomcat-8.5.57/webapps/examples/jsp/num/numguess.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/num/numguess.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/plugin/applet/Clock2.class
+apache-tomcat-8.5.57/webapps/examples/jsp/plugin/applet/Clock2.java
+apache-tomcat-8.5.57/webapps/examples/jsp/plugin/plugin.html
+apache-tomcat-8.5.57/webapps/examples/jsp/plugin/plugin.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/plugin/plugin.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/security/protected/error.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/security/protected/error.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/security/protected/index.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/security/protected/index.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/security/protected/login.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/security/protected/login.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/sessions/DummyCart.html
+apache-tomcat-8.5.57/webapps/examples/jsp/sessions/carts.html
+apache-tomcat-8.5.57/webapps/examples/jsp/sessions/carts.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/sessions/carts.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/sessions/crt.html
+apache-tomcat-8.5.57/webapps/examples/jsp/simpletag/foo.html
+apache-tomcat-8.5.57/webapps/examples/jsp/simpletag/foo.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/simpletag/foo.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/snp/snoop.html
+apache-tomcat-8.5.57/webapps/examples/jsp/snp/snoop.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/snp/snoop.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/choose.html
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/choose.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/choose.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/foreach.html
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/foreach.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/foreach.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/howto.html
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/if.html
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/if.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/if.jsp.html
+apache-tomcat-8.5.57/webapps/examples/jsp/tagplugin/notes.html
+apache-tomcat-8.5.57/webapps/examples/jsp/xml/xml.html
+apache-tomcat-8.5.57/webapps/examples/jsp/xml/xml.jsp
+apache-tomcat-8.5.57/webapps/examples/jsp/xml/xml.jsp.html
+apache-tomcat-8.5.57/webapps/examples/servlets/cookies.html
+apache-tomcat-8.5.57/webapps/examples/servlets/helloworld.html
+apache-tomcat-8.5.57/webapps/examples/servlets/images/code.gif
+apache-tomcat-8.5.57/webapps/examples/servlets/images/execute.gif
+apache-tomcat-8.5.57/webapps/examples/servlets/images/return.gif
+apache-tomcat-8.5.57/webapps/examples/servlets/index.html
+apache-tomcat-8.5.57/webapps/examples/servlets/nonblocking/bytecounter.html
+apache-tomcat-8.5.57/webapps/examples/servlets/reqheaders.html
+apache-tomcat-8.5.57/webapps/examples/servlets/reqinfo.html
+apache-tomcat-8.5.57/webapps/examples/servlets/reqparams.html
+apache-tomcat-8.5.57/webapps/examples/servlets/sessions.html
+apache-tomcat-8.5.57/webapps/examples/websocket/chat.xhtml
+apache-tomcat-8.5.57/webapps/examples/websocket/drawboard.xhtml
+apache-tomcat-8.5.57/webapps/examples/websocket/echo.xhtml
+apache-tomcat-8.5.57/webapps/examples/websocket/index.xhtml
+apache-tomcat-8.5.57/webapps/examples/websocket/snake.xhtml
+apache-tomcat-8.5.57/webapps/host-manager/META-INF/context.xml
+apache-tomcat-8.5.57/webapps/host-manager/WEB-INF/jsp/401.jsp
+apache-tomcat-8.5.57/webapps/host-manager/WEB-INF/jsp/403.jsp
+apache-tomcat-8.5.57/webapps/host-manager/WEB-INF/jsp/404.jsp
+apache-tomcat-8.5.57/webapps/host-manager/WEB-INF/web.xml
+apache-tomcat-8.5.57/webapps/host-manager/images/asf-logo.svg
+apache-tomcat-8.5.57/webapps/host-manager/images/tomcat.gif
+apache-tomcat-8.5.57/webapps/host-manager/index.jsp
+apache-tomcat-8.5.57/webapps/host-manager/manager.xml
+apache-tomcat-8.5.57/webapps/manager/META-INF/context.xml
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/401.jsp
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/403.jsp
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/404.jsp
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/connectorCerts.jsp
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/connectorCiphers.jsp
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/connectorTrustedCerts.jsp
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/jsp/sessionsList.jsp
+apache-tomcat-8.5.57/webapps/manager/WEB-INF/web.xml
+apache-tomcat-8.5.57/webapps/manager/images/asf-logo.svg
+apache-tomcat-8.5.57/webapps/manager/images/tomcat.gif
+apache-tomcat-8.5.57/webapps/manager/index.jsp
+apache-tomcat-8.5.57/webapps/manager/status.xsd
+apache-tomcat-8.5.57/webapps/manager/xform.xsl
+apache-tomcat-8.5.57/bin/catalina.sh
+apache-tomcat-8.5.57/bin/ciphers.sh
+apache-tomcat-8.5.57/bin/configtest.sh
+apache-tomcat-8.5.57/bin/daemon.sh
+apache-tomcat-8.5.57/bin/digest.sh
+apache-tomcat-8.5.57/bin/setclasspath.sh
+apache-tomcat-8.5.57/bin/shutdown.sh
+apache-tomcat-8.5.57/bin/startup.sh
+apache-tomcat-8.5.57/bin/tool-wrapper.sh
+apache-tomcat-8.5.57/bin/version.sh
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]# ls -lrth
+total 10M
+drwxr-xr-x 2 root root    6 Aug 16  2018 rh
+-rw-r--r-- 1 root root 9.9M Jun 30 22:09 apache-tomcat-8.5.57.tar.gz
+drwxr-xr-x 4 root root   33 Sep  4 00:49 aws
+drwxr-xr-x 9 root root  220 Sep 13 10:26 apache-tomcat-8.5.57
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]#
+[root@ip-10-0-0-233 opt]# cd apache-tomcat-8.5.57/
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# ls -lrth
+total 124K
+drwxr-x--- 2 root root    6 Jun 30 21:49 work
+drwxr-x--- 2 root root    6 Jun 30 21:49 logs
+drwxr-x--- 7 root root   81 Jun 30 21:50 webapps
+-rw-r----- 1 root root  16K Jun 30 21:53 RUNNING.txt
+-rw-r----- 1 root root 7.0K Jun 30 21:53 RELEASE-NOTES
+-rw-r----- 1 root root 3.2K Jun 30 21:53 README.md
+-rw-r----- 1 root root 1.7K Jun 30 21:53 NOTICE
+-rw-r----- 1 root root  56K Jun 30 21:53 LICENSE
+-rw-r----- 1 root root 5.3K Jun 30 21:53 CONTRIBUTING.md
+drwx------ 2 root root  238 Jun 30 21:53 conf
+-rw-r----- 1 root root  19K Jun 30 21:53 BUILDING.txt
+drwxr-x--- 2 root root   30 Sep 13 10:26 temp
+drwxr-x--- 2 root root 4.0K Sep 13 10:26 lib
+drwxr-x--- 2 root root 4.0K Sep 13 10:26 bin
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# cd bin/
+[root@ip-10-0-0-233 bin]# ls-lrth
+-bash: ls-lrth: command not found
+[root@ip-10-0-0-233 bin]# ls -lrth
+total 868K
+-rw-r----- 1 root root 2.0K Jun 30 21:50 version.bat
+-rw-r----- 1 root root 4.5K Jun 30 21:50 tool-wrapper.bat
+-rw-r----- 1 root root  51K Jun 30 21:50 tomcat-juli.jar
+-rw-r----- 1 root root 2.0K Jun 30 21:50 startup.bat
+-rw-r----- 1 root root 2.0K Jun 30 21:50 shutdown.bat
+-rw-r----- 1 root root 3.4K Jun 30 21:50 setclasspath.bat
+-rw-r----- 1 root root 2.1K Jun 30 21:50 digest.bat
+-rw-r----- 1 root root 2.0K Jun 30 21:50 configtest.bat
+-rw-r----- 1 root root  25K Jun 30 21:50 commons-daemon.jar
+-rw-r----- 1 root root 2.1K Jun 30 21:50 ciphers.bat
+-rw-r----- 1 root root  17K Jun 30 21:50 catalina.bat
+-rw-r----- 1 root root  36K Jun 30 21:50 bootstrap.jar
+-rwxr-x--- 1 root root 1.9K Jun 30 21:50 version.sh
+-rwxr-x--- 1 root root 5.5K Jun 30 21:50 tool-wrapper.sh
+-rw-r----- 1 root root 410K Jun 30 21:50 tomcat-native.tar.gz
+-rwxr-x--- 1 root root 1.9K Jun 30 21:50 startup.sh
+-rwxr-x--- 1 root root 1.9K Jun 30 21:50 shutdown.sh
+-rwxr-x--- 1 root root 3.7K Jun 30 21:50 setclasspath.sh
+-rwxr-x--- 1 root root 2.0K Jun 30 21:50 digest.sh
+-rwxr-x--- 1 root root 8.9K Jun 30 21:50 daemon.sh
+-rwxr-x--- 1 root root 1.9K Jun 30 21:50 configtest.sh
+-rw-r----- 1 root root 203K Jun 30 21:50 commons-daemon-native.tar.gz
+-rwxr-x--- 1 root root 2.0K Jun 30 21:50 ciphers.sh
+-rwxr-x--- 1 root root  25K Jun 30 21:50 catalina.sh
+-rw-r----- 1 root root 1.7K Jun 30 21:53 catalina-tasks.xml
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]# cd ../logs/
+[root@ip-10-0-0-233 logs]# tail -20f catalina.out
+13-Sep-2020 10:27:03.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/apache-tomcat-8.5.57
+13-Sep-2020 10:27:03.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/apache-tomcat-8.5.57/temp
+13-Sep-2020 10:27:03.030 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-Sep-2020 10:27:03.179 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Sep-2020 10:27:03.200 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Sep-2020 10:27:03.236 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1103 ms
+13-Sep-2020 10:27:03.292 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Sep-2020 10:27:03.293 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.57
+13-Sep-2020 10:27:03.312 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT]
+13-Sep-2020 10:27:03.830 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT] has finished in [518] ms
+13-Sep-2020 10:27:03.837 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/docs]
+13-Sep-2020 10:27:03.871 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/docs] has finished in [34] ms
+13-Sep-2020 10:27:03.871 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/examples]
+13-Sep-2020 10:27:04.333 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/examples] has finished in [462] ms
+13-Sep-2020 10:27:04.334 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager]
+13-Sep-2020 10:27:04.386 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager] has finished in [52] ms
+13-Sep-2020 10:27:04.386 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/manager]
+13-Sep-2020 10:27:04.431 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/manager] has finished in [45] ms
+13-Sep-2020 10:27:04.438 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Sep-2020 10:27:04.456 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1215 ms
+
+
+
+
+
+^C
+[root@ip-10-0-0-233 logs]# ps -ef | grep -i tomcat
+root      3829     1 13 10:27 pts/0    00:00:02 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre/bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.57/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar -Dcatalina.base=/opt/apache-tomcat-8.5.57 -Dcatalina.home=/opt/apache-tomcat-8.5.57 -Djava.io.tmpdir=/opt/apache-tomcat-8.5.57/temp org.apache.catalina.startup.Bootstrap start
+root      3868  3523  0 10:27 pts/0    00:00:00 grep --color=auto -i tomcat
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# tail -20f catalina.out
+13-Sep-2020 10:27:03.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/apache-tomcat-8.5.57
+13-Sep-2020 10:27:03.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/apache-tomcat-8.5.57/temp
+13-Sep-2020 10:27:03.030 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-Sep-2020 10:27:03.179 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Sep-2020 10:27:03.200 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Sep-2020 10:27:03.236 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1103 ms
+13-Sep-2020 10:27:03.292 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Sep-2020 10:27:03.293 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.57
+13-Sep-2020 10:27:03.312 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT]
+13-Sep-2020 10:27:03.830 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT] has finished in [518] ms
+13-Sep-2020 10:27:03.837 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/docs]
+13-Sep-2020 10:27:03.871 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/docs] has finished in [34] ms
+13-Sep-2020 10:27:03.871 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/examples]
+13-Sep-2020 10:27:04.333 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/examples] has finished in [462] ms
+13-Sep-2020 10:27:04.334 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager]
+13-Sep-2020 10:27:04.386 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager] has finished in [52] ms
+13-Sep-2020 10:27:04.386 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/manager]
+13-Sep-2020 10:27:04.431 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/manager] has finished in [45] ms
+13-Sep-2020 10:27:04.438 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Sep-2020 10:27:04.456 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1215 ms
+
+
+
+
+
+
+^C
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# pwd
+/opt/apache-tomcat-8.5.57/logs
+[root@ip-10-0-0-233 logs]# cd ../conf/
+[root@ip-10-0-0-233 conf]# ls -lrth
+total 224K
+-rw------- 1 root root 168K Jun 30 21:53 web.xml
+-rw------- 1 root root 2.5K Jun 30 21:53 tomcat-users.xsd
+-rw------- 1 root root 2.2K Jun 30 21:53 tomcat-users.xml
+-rw------- 1 root root 7.5K Jun 30 21:53 server.xml
+-rw------- 1 root root 3.9K Jun 30 21:53 logging.properties
+-rw------- 1 root root 2.3K Jun 30 21:53 jaspic-providers.xsd
+-rw------- 1 root root 1.2K Jun 30 21:53 jaspic-providers.xml
+-rw------- 1 root root 1.4K Jun 30 21:53 context.xml
+-rw------- 1 root root 7.5K Jun 30 21:53 catalina.properties
+-rw------- 1 root root  14K Jun 30 21:53 catalina.policy
+drwxr-x--- 3 root root   23 Sep 13 10:27 Catalina
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]# cp -p server.xml server.xml-RR
+[root@ip-10-0-0-233 conf]# vi server.xml
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]# cd ../bin/
+[root@ip-10-0-0-233 bin]# ./shutdown.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]# tail -20f ../logs/catalina.out
+13-Sep-2020 10:27:03.236 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1103 ms
+13-Sep-2020 10:27:03.292 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Sep-2020 10:27:03.293 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.57
+13-Sep-2020 10:27:03.312 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT]
+13-Sep-2020 10:27:03.830 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT] has finished in [518] ms
+13-Sep-2020 10:27:03.837 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/docs]
+13-Sep-2020 10:27:03.871 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/docs] has finished in [34] ms
+13-Sep-2020 10:27:03.871 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/examples]
+13-Sep-2020 10:27:04.333 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/examples] has finished in [462] ms
+13-Sep-2020 10:27:04.334 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager]
+13-Sep-2020 10:27:04.386 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager] has finished in [52] ms
+13-Sep-2020 10:27:04.386 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/manager]
+13-Sep-2020 10:27:04.431 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/manager] has finished in [45] ms
+13-Sep-2020 10:27:04.438 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Sep-2020 10:27:04.456 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1215 ms
+13-Sep-2020 10:31:41.246 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Sep-2020 10:31:41.247 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Sep-2020 10:31:41.250 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Sep-2020 10:31:41.309 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Sep-2020 10:31:41.310 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+^C
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]# ./startdown.sh
+-bash: ./startdown.sh: No such file or directory
+[root@ip-10-0-0-233 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]# tail -20f ../logs/catalina.out
+13-Sep-2020 10:32:13.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/apache-tomcat-8.5.57
+13-Sep-2020 10:32:13.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/apache-tomcat-8.5.57/temp
+13-Sep-2020 10:32:13.466 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-Sep-2020 10:32:13.617 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8090"]
+13-Sep-2020 10:32:13.643 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Sep-2020 10:32:13.682 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1124 ms
+13-Sep-2020 10:32:13.731 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Sep-2020 10:32:13.731 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.57
+13-Sep-2020 10:32:13.749 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT]
+13-Sep-2020 10:32:14.274 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT] has finished in [524] ms
+13-Sep-2020 10:32:14.281 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/docs]
+13-Sep-2020 10:32:14.317 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/docs] has finished in [36] ms
+13-Sep-2020 10:32:14.321 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/examples]
+13-Sep-2020 10:32:14.778 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/examples] has finished in [457] ms
+13-Sep-2020 10:32:14.778 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager]
+13-Sep-2020 10:32:14.827 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager] has finished in [49] ms
+13-Sep-2020 10:32:14.827 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/manager]
+13-Sep-2020 10:32:14.873 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/manager] has finished in [46] ms
+13-Sep-2020 10:32:14.878 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8090"]
+13-Sep-2020 10:32:14.907 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1224 ms
+^C
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]# pwd
+/opt/apache-tomcat-8.5.57/bin
+[root@ip-10-0-0-233 bin]# cd ..
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# ls -lrth
+total 124K
+drwxr-x--- 7 root root   81 Jun 30 21:50 webapps
+-rw-r----- 1 root root  16K Jun 30 21:53 RUNNING.txt
+-rw-r----- 1 root root 7.0K Jun 30 21:53 RELEASE-NOTES
+-rw-r----- 1 root root 3.2K Jun 30 21:53 README.md
+-rw-r----- 1 root root 1.7K Jun 30 21:53 NOTICE
+-rw-r----- 1 root root  56K Jun 30 21:53 LICENSE
+-rw-r----- 1 root root 5.3K Jun 30 21:53 CONTRIBUTING.md
+-rw-r----- 1 root root  19K Jun 30 21:53 BUILDING.txt
+drwxr-x--- 2 root root   30 Sep 13 10:26 temp
+drwxr-x--- 2 root root 4.0K Sep 13 10:26 lib
+drwxr-x--- 2 root root 4.0K Sep 13 10:26 bin
+drwxr-x--- 2 root root  197 Sep 13 10:27 logs
+drwxr-x--- 3 root root   22 Sep 13 10:27 work
+drwx------ 3 root root  275 Sep 13 10:31 conf
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# cd w
+webapps/ work/
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# cd webapps/host-manager/META-INF/
+[root@ip-10-0-0-233 META-INF]# ls -lrth
+total 4.0K
+-rw-r----- 1 root root 1.2K Jun 30 21:53 context.xml
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]# cp -p context.xml context.xml-RR
+[root@ip-10-0-0-233 META-INF]# vi context.xml
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]# cd ..
+[root@ip-10-0-0-233 host-manager]# cd ..
+[root@ip-10-0-0-233 webapps]# cd manager/
+images/   META-INF/ WEB-INF/
+[root@ip-10-0-0-233 webapps]# cd manager/
+images/   META-INF/ WEB-INF/
+[root@ip-10-0-0-233 webapps]# cd manager/META-INF/
+[root@ip-10-0-0-233 META-INF]# ls -lrth
+total 4.0K
+-rw-r----- 1 root root 1.2K Jun 30 21:53 context.xml
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]# cp -p context.xml context.xml-RR
+[root@ip-10-0-0-233 META-INF]# vi context.xml
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]#
+[root@ip-10-0-0-233 META-INF]#  cd ../..
+[root@ip-10-0-0-233 webapps]# cd ../bin/
+[root@ip-10-0-0-233 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]# ./shutdown.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+[root@ip-10-0-0-233 bin]# cd ../bin/
+[root@ip-10-0-0-233 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-10-0-0-233 bin]# ls -rlrth
+total 868K
+-rw-r----- 1 root root 2.0K Jun 30 21:50 version.bat
+-rw-r----- 1 root root 4.5K Jun 30 21:50 tool-wrapper.bat
+-rw-r----- 1 root root  51K Jun 30 21:50 tomcat-juli.jar
+-rw-r----- 1 root root 2.0K Jun 30 21:50 startup.bat
+-rw-r----- 1 root root 2.0K Jun 30 21:50 shutdown.bat
+-rw-r----- 1 root root 3.4K Jun 30 21:50 setclasspath.bat
+-rw-r----- 1 root root 2.1K Jun 30 21:50 digest.bat
+-rw-r----- 1 root root 2.0K Jun 30 21:50 configtest.bat
+-rw-r----- 1 root root  25K Jun 30 21:50 commons-daemon.jar
+-rw-r----- 1 root root 2.1K Jun 30 21:50 ciphers.bat
+-rw-r----- 1 root root  17K Jun 30 21:50 catalina.bat
+-rw-r----- 1 root root  36K Jun 30 21:50 bootstrap.jar
+-rwxr-x--- 1 root root 1.9K Jun 30 21:50 version.sh
+-rwxr-x--- 1 root root 5.5K Jun 30 21:50 tool-wrapper.sh
+-rw-r----- 1 root root 410K Jun 30 21:50 tomcat-native.tar.gz
+-rwxr-x--- 1 root root 1.9K Jun 30 21:50 startup.sh
+-rwxr-x--- 1 root root 1.9K Jun 30 21:50 shutdown.sh
+-rwxr-x--- 1 root root 3.7K Jun 30 21:50 setclasspath.sh
+-rwxr-x--- 1 root root 2.0K Jun 30 21:50 digest.sh
+-rwxr-x--- 1 root root 8.9K Jun 30 21:50 daemon.sh
+-rwxr-x--- 1 root root 1.9K Jun 30 21:50 configtest.sh
+-rw-r----- 1 root root 203K Jun 30 21:50 commons-daemon-native.tar.gz
+-rwxr-x--- 1 root root 2.0K Jun 30 21:50 ciphers.sh
+-rwxr-x--- 1 root root  25K Jun 30 21:50 catalina.sh
+-rw-r----- 1 root root 1.7K Jun 30 21:53 catalina-tasks.xml
+[root@ip-10-0-0-233 bin]#
+[root@ip-10-0-0-233 bin]# cd ../
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# cd conf/
+[root@ip-10-0-0-233 conf]# ls -lrth
+total 232K
+-rw------- 1 root root 168K Jun 30 21:53 web.xml
+-rw------- 1 root root 2.5K Jun 30 21:53 tomcat-users.xsd
+-rw------- 1 root root 2.2K Jun 30 21:53 tomcat-users.xml
+-rw------- 1 root root 7.5K Jun 30 21:53 server.xml-RR
+-rw------- 1 root root 3.9K Jun 30 21:53 logging.properties
+-rw------- 1 root root 2.3K Jun 30 21:53 jaspic-providers.xsd
+-rw------- 1 root root 1.2K Jun 30 21:53 jaspic-providers.xml
+-rw------- 1 root root 1.4K Jun 30 21:53 context.xml
+-rw------- 1 root root 7.5K Jun 30 21:53 catalina.properties
+-rw------- 1 root root  14K Jun 30 21:53 catalina.policy
+drwxr-x--- 3 root root   23 Sep 13 10:27 Catalina
+-rw------- 1 root root 7.5K Sep 13 10:31 server.xml
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]# vi tomcat-users.xml
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]# cd ../bin/
+[root@ip-10-0-0-233 bin]# ./shutdown.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+[root@ip-10-0-0-233 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-10-0-0-233 bin]# cd ../conf/
+[root@ip-10-0-0-233 conf]# ls -lrth
+total 232K
+-rw------- 1 root root 168K Jun 30 21:53 web.xml
+-rw------- 1 root root 2.5K Jun 30 21:53 tomcat-users.xsd
+-rw------- 1 root root 7.5K Jun 30 21:53 server.xml-RR
+-rw------- 1 root root 3.9K Jun 30 21:53 logging.properties
+-rw------- 1 root root 2.3K Jun 30 21:53 jaspic-providers.xsd
+-rw------- 1 root root 1.2K Jun 30 21:53 jaspic-providers.xml
+-rw------- 1 root root 1.4K Jun 30 21:53 context.xml
+-rw------- 1 root root 7.5K Jun 30 21:53 catalina.properties
+-rw------- 1 root root  14K Jun 30 21:53 catalina.policy
+drwxr-x--- 3 root root   23 Sep 13 10:27 Catalina
+-rw------- 1 root root 7.5K Sep 13 10:31 server.xml
+-rw------- 1 root root 2.2K Sep 13 10:38 tomcat-users.xml
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]# more tomcat-users.x
+more: stat of tomcat-users.x failed: No such file or directory
+[root@ip-10-0-0-233 conf]# more tomcat-users.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+<!--
+  NOTE:  By default, no user is included in the "manager-gui" role required
+  to operate the "/manager/html" web application.  If you wish to use this app,
+  you must define such a user - the username and password are arbitrary. It is
+  strongly recommended that you do NOT use one of the users in the commented out
+  section below since they are intended for use with the examples web
+  application.
+-->
+<!--
+  NOTE:  The sample user and role entries below are intended for use with the
+  examples web application. They are wrapped in a comment and thus are ignored
+  when reading this file. If you wish to configure these users for use with the
+  examples web application, do not forget to remove the <!.. ..> that surrounds
+  them. You will also need to set the passwords to something appropriate.
+-->
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="<must-be-changed>" roles="tomcat"/>
+  <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
+  <user username="role1" password="<must-be-changed>" roles="role1"/>
+-->
+<user username="admin" password="admin" roles="manager-gui,admin-gui" />
+</tomcat-users>
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]# top
+top - 10:58:18 up 48 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  86 total,   1 running,  49 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  1.3 sy,  0.0 ni, 97.7 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st
+KiB Mem :  1006940 total,   232560 free,   153692 used,   620688 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   706512 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+ 4301 root      20   0  170988   4372   3712 R  0.3  0.4   0:00.64 top
+    1 root      20   0  125480   5244   3852 S  0.0  0.5   0:01.63 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H
+    5 root      20   0       0      0      0 I  0.0  0.0   0:00.12 kworker/u30:0
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.07 ksoftirqd/0
+    8 root      20   0       0      0      0 I  0.0  0.0   0:00.19 rcu_sched
+    9 root      20   0       0      0      0 I  0.0  0.0   0:00.00 rcu_bh
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.01 watchdog/0
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   15 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 netns
+   21 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   22 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatch
+  172 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd
+  173 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper
+  174 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 writeback
+  176 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0
+  177 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd
+  178 root      39  19       0      0      0 S  0.0  0.0   0:00.00 khugepaged
+  179 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 crypto
+  180 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kintegrityd
+  182 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kblockd
+  535 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 md
+  538 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 edac-poller
+  543 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 watchdogd
+  684 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kauditd
+  690 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kswapd0
+  822 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kthrotld
+  872 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kstrp
+  900 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 ipv6_addrconf
+ 1739 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 ata_sff
+ 1746 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_0
+ 1756 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 scsi_tmf_0
+ 1760 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_1
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]#
+[root@ip-10-0-0-233 conf]# cd ../l
+-bash: cd: ../l: No such file or directory
+[root@ip-10-0-0-233 conf]# cd ../logs/
+[root@ip-10-0-0-233 logs]# ls -lrth
+total 92K
+-rw-r----- 1 root root    0 Sep 13 10:27 host-manager.2020-09-13.log
+-rw-r----- 1 root root 3.4K Sep 13 10:38 localhost.2020-09-13.log
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.out
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.2020-09-13.log
+-rw-r----- 1 root root  668 Sep 13 10:57 manager.2020-09-13.log
+-rw-r----- 1 root root 3.3K Sep 13 10:58 localhost_access_log.2020-09-13.txt
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# tail -20f localhost.2020-09-13.log
+13-Sep-2020 10:31:41.284 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-Sep-2020 10:31:41.287 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-Sep-2020 10:32:14.758 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-Sep-2020 10:32:14.761 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-Sep-2020 10:32:14.762 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7b28a7ef')
+13-Sep-2020 10:36:37.511 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-Sep-2020 10:36:37.513 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-Sep-2020 10:36:37.514 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@568d74af')
+13-Sep-2020 10:36:37.656 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-Sep-2020 10:36:37.656 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-Sep-2020 10:36:41.044 INFO [localhost-startStop-4] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-Sep-2020 10:36:41.044 INFO [localhost-startStop-4] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-Sep-2020 10:36:53.861 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-Sep-2020 10:36:53.861 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-Sep-2020 10:36:53.863 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7b28a7ef')
+13-Sep-2020 10:38:25.247 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-Sep-2020 10:38:25.247 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-Sep-2020 10:38:48.580 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-Sep-2020 10:38:48.585 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-Sep-2020 10:38:48.586 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@19e5d3a2')
+
+
+
+v^C
+[root@ip-10-0-0-233 logs]# tail -20f host-manager.2020-09-13.log
+
+
+^C
+[root@ip-10-0-0-233 logs]# tail -20f catalina.out
+13-Sep-2020 10:38:47.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/apache-tomcat-8.5.57
+13-Sep-2020 10:38:47.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/apache-tomcat-8.5.57/temp
+13-Sep-2020 10:38:47.319 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-Sep-2020 10:38:47.475 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8090"]
+13-Sep-2020 10:38:47.496 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Sep-2020 10:38:47.531 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1100 ms
+13-Sep-2020 10:38:47.587 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Sep-2020 10:38:47.587 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.57
+13-Sep-2020 10:38:47.607 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT]
+13-Sep-2020 10:38:48.104 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/ROOT] has finished in [496] ms
+13-Sep-2020 10:38:48.111 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/docs]
+13-Sep-2020 10:38:48.147 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/docs] has finished in [36] ms
+13-Sep-2020 10:38:48.147 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/examples]
+13-Sep-2020 10:38:48.595 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/examples] has finished in [448] ms
+13-Sep-2020 10:38:48.596 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager]
+13-Sep-2020 10:38:48.638 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/host-manager] has finished in [42] ms
+13-Sep-2020 10:38:48.641 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/apache-tomcat-8.5.57/webapps/manager]
+13-Sep-2020 10:38:48.686 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/apache-tomcat-8.5.57/webapps/manager] has finished in [44] ms
+13-Sep-2020 10:38:48.690 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8090"]
+13-Sep-2020 10:38:48.721 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1189 ms
+
+
+
+
+
+^C
+[root@ip-10-0-0-233 logs]# ls -lrth
+total 92K
+-rw-r----- 1 root root    0 Sep 13 10:27 host-manager.2020-09-13.log
+-rw-r----- 1 root root 3.4K Sep 13 10:38 localhost.2020-09-13.log
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.out
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.2020-09-13.log
+-rw-r----- 1 root root  668 Sep 13 10:57 manager.2020-09-13.log
+-rw-r----- 1 root root 3.6K Sep 13 10:59 localhost_access_log.2020-09-13.txt
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# tail -20f manager.2020-09-13.log
+13-Sep-2020 10:39:20.191 INFO [http-nio-8090-exec-5] org.apache.catalina.core.ApplicationContext.log HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+13-Sep-2020 10:39:20.197 INFO [http-nio-8090-exec-5] org.apache.catalina.core.ApplicationContext.log HTMLManager: init: Global resources are available
+13-Sep-2020 10:39:20.209 INFO [http-nio-8090-exec-5] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+13-Sep-2020 10:57:23.152 INFO [http-nio-8090-exec-1] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+
+
+
+
+13-Sep-2020 10:59:57.171 INFO [http-nio-8090-exec-8] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+13-Sep-2020 11:00:02.156 INFO [http-nio-8090-exec-2] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+13-Sep-2020 11:00:04.336 INFO [http-nio-8090-exec-3] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+13-Sep-2020 11:00:06.020 INFO [http-nio-8090-exec-4] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+^C
+[root@ip-10-0-0-233 logs]# cd ..
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# ls -lr
+total 124
+drwxr-x--- 3 root root    22 Sep 13 10:27 work
+drwxr-x--- 7 root root    81 Jun 30 21:50 webapps
+drwxr-x--- 2 root root    30 Sep 13 10:26 temp
+-rw-r----- 1 root root 16262 Jun 30 21:53 RUNNING.txt
+-rw-r----- 1 root root  7136 Jun 30 21:53 RELEASE-NOTES
+-rw-r----- 1 root root  3255 Jun 30 21:53 README.md
+-rw-r----- 1 root root  1726 Jun 30 21:53 NOTICE
+drwxr-x--- 2 root root   197 Sep 13 10:27 logs
+-rw-r----- 1 root root 57011 Jun 30 21:53 LICENSE
+drwxr-x--- 2 root root  4096 Sep 13 10:26 lib
+-rw-r----- 1 root root  5408 Jun 30 21:53 CONTRIBUTING.md
+drwx------ 3 root root   275 Sep 13 10:38 conf
+-rw-r----- 1 root root 19318 Jun 30 21:53 BUILDING.txt
+drwxr-x--- 2 root root  4096 Sep 13 10:26 bin
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# cd logs/
+[root@ip-10-0-0-233 logs]# ls -lrth
+total 96K
+-rw-r----- 1 root root    0 Sep 13 10:27 host-manager.2020-09-13.log
+-rw-r----- 1 root root 3.4K Sep 13 10:38 localhost.2020-09-13.log
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.out
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.2020-09-13.log
+-rw-r----- 1 root root 1.4K Sep 13 11:00 manager.2020-09-13.log
+-rw-r----- 1 root root 4.3K Sep 13 11:00 localhost_access_log.2020-09-13.txt
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# ls -lrth
+total 96K
+-rw-r----- 1 root root    0 Sep 13 10:27 host-manager.2020-09-13.log
+-rw-r----- 1 root root 3.4K Sep 13 10:38 localhost.2020-09-13.log
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.out
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.2020-09-13.log
+-rw-r----- 1 root root 4.3K Sep 13 11:00 localhost_access_log.2020-09-13.txt
+-rw-r----- 1 root root 1.5K Sep 13 11:00 manager.2020-09-13.log
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# date
+Sun Sep 13 11:00:35 UTC 2020
+[root@ip-10-0-0-233 logs]# ls -lrth
+total 96K
+-rw-r----- 1 root root    0 Sep 13 10:27 host-manager.2020-09-13.log
+-rw-r----- 1 root root 3.4K Sep 13 10:38 localhost.2020-09-13.log
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.out
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.2020-09-13.log
+-rw-r----- 1 root root 4.5K Sep 13 11:00 localhost_access_log.2020-09-13.txt
+-rw-r----- 1 root root 1.8K Sep 13 11:00 manager.2020-09-13.log
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# ls -lrth
+total 96K
+-rw-r----- 1 root root    0 Sep 13 10:27 host-manager.2020-09-13.log
+-rw-r----- 1 root root 3.4K Sep 13 10:38 localhost.2020-09-13.log
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.out
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.2020-09-13.log
+-rw-r----- 1 root root 1.8K Sep 13 11:00 manager.2020-09-13.log
+-rw-r----- 1 root root 4.6K Sep 13 11:00 localhost_access_log.2020-09-13.txt
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# top
+top - 11:14:35 up  1:05,  1 user,  load average: 0.00, 0.01, 0.00
+Tasks:  87 total,   1 running,  50 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1006940 total,   168832 free,   165856 used,   672252 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   687740 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+ 4409 root      20   0  170992   4436   3772 R  0.3  0.4   0:00.55 top
+    1 root      20   0  125480   5244   3852 S  0.0  0.5   0:01.65 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H
+    5 root      20   0       0      0      0 I  0.0  0.0   0:00.14 kworker/u30:0
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.16 ksoftirqd/0
+    8 root      20   0       0      0      0 I  0.0  0.0   0:00.22 rcu_sched
+    9 root      20   0       0      0      0 I  0.0  0.0   0:00.00 rcu_bh
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.01 watchdog/0
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   15 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 netns
+   21 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   22 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatch
+  172 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd
+  173 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper
+  174 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 writeback
+  176 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0
+  177 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd
+  178 root      39  19       0      0      0 S  0.0  0.0   0:00.00 khugepaged
+  179 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 crypto
+  180 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kintegrityd
+  182 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kblockd
+  535 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 md
+  538 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 edac-poller
+  543 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 watchdogd
+  684 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kauditd
+  690 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kswapd0
+  822 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kthrotld
+  872 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kstrp
+  900 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 ipv6_addrconf
+  939 root      20   0       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0
+  946 root      20   0       0      0      0 I  0.0  0.0   0:00.00 kworker/0:2
+ 1739 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 ata_sff
+ 1746 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_0
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# wget http://localhost:8090
+--2020-09-13 11:14:49--  http://localhost:8090/
+Resolving localhost (localhost)... 127.0.0.1
+Connecting to localhost (localhost)|127.0.0.1|:8090... connected.
+HTTP request sent, awaiting response... 200
+Length: unspecified [text/html]
+Saving to: ‘index.html’
+
+    [ <=>                                                                                                                           ] 11,195      --.-K/s   in 0s
+
+2020-09-13 11:14:49 (255 MB/s) - ‘index.html’ saved [11195]
+
+[root@ip-10-0-0-233 logs]# wget http://localhost:8080
+--2020-09-13 11:15:00--  http://localhost:8080/
+Resolving localhost (localhost)... 127.0.0.1
+Connecting to localhost (localhost)|127.0.0.1|:8080... failed: Connection refused.
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# wget http://localhost:8090
+--2020-09-13 11:15:04--  http://localhost:8090/
+Resolving localhost (localhost)... 127.0.0.1
+Connecting to localhost (localhost)|127.0.0.1|:8090... connected.
+HTTP request sent, awaiting response... 200
+Length: unspecified [text/html]
+Saving to: ‘index.html.1’
+
+    [ <=>                                                                                                                           ] 11,195      --.-K/s   in 0s
+
+2020-09-13 11:15:04 (230 MB/s) - ‘index.html.1’ saved [11195]
+
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# top
+top - 11:20:01 up  1:10,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  87 total,   1 running,  50 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.3 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1006940 total,   168680 free,   165880 used,   672380 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   687712 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+  978 root      20   0  170992   4524   3856 R  0.7  0.4   0:00.08 top
+ 4259 root      20   0 2301244  93752  17380 S  0.3  9.3   0:06.59 java
+    1 root      20   0  125480   5244   3852 S  0.0  0.5   0:01.65 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H
+    5 root      20   0       0      0      0 I  0.0  0.0   0:00.14 kworker/u30:0
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.16 ksoftirqd/0
+    8 root      20   0       0      0      0 I  0.0  0.0   0:00.23 rcu_sched
+    9 root      20   0       0      0      0 I  0.0  0.0   0:00.00 rcu_bh
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.01 watchdog/0
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   15 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 netns
+   21 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   22 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatch
+  172 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd
+  173 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper
+  174 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 writeback
+  176 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0
+  177 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd
+  178 root      39  19       0      0      0 S  0.0  0.0   0:00.00 khugepaged
+  179 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 crypto
+  180 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kintegrityd
+  182 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kblockd
+  535 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 md
+  538 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 edac-poller
+  543 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 watchdogd
+  684 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kauditd
+  690 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kswapd0
+  822 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kthrotld
+  872 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kstrp
+  900 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 ipv6_addrconf
+  939 root      20   0       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0
+  946 root      20   0       0      0      0 I  0.0  0.0   0:00.00 kworker/0:2
+  998 root      20   0       0      0      0 I  0.0  0.0   0:00.00 kworker/0:1
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]#
+[root@ip-10-0-0-233 logs]# ls -lrh
+total 120K
+-rw-r----- 1 root root 1.8K Sep 13 11:00 manager.2020-09-13.log
+-rw-r----- 1 root root 4.7K Sep 13 11:15 localhost_access_log.2020-09-13.txt
+-rw-r----- 1 root root 3.4K Sep 13 10:38 localhost.2020-09-13.log
+-rw-r--r-- 1 root root  11K Sep 13 11:15 index.html.1
+-rw-r--r-- 1 root root  11K Sep 13 11:14 index.html
+-rw-r----- 1 root root    0 Sep 13 10:27 host-manager.2020-09-13.log
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.out
+-rw-r----- 1 root root  37K Sep 13 10:38 catalina.2020-09-13.log
+[root@ip-10-0-0-233 logs]# cd ..
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# ls -lrth
+total 124K
+drwxr-x--- 7 root root   81 Jun 30 21:50 webapps
+-rw-r----- 1 root root  16K Jun 30 21:53 RUNNING.txt
+-rw-r----- 1 root root 7.0K Jun 30 21:53 RELEASE-NOTES
+-rw-r----- 1 root root 3.2K Jun 30 21:53 README.md
+-rw-r----- 1 root root 1.7K Jun 30 21:53 NOTICE
+-rw-r----- 1 root root  56K Jun 30 21:53 LICENSE
+-rw-r----- 1 root root 5.3K Jun 30 21:53 CONTRIBUTING.md
+-rw-r----- 1 root root  19K Jun 30 21:53 BUILDING.txt
+drwxr-x--- 2 root root   30 Sep 13 10:26 temp
+drwxr-x--- 2 root root 4.0K Sep 13 10:26 lib
+drwxr-x--- 2 root root 4.0K Sep 13 10:26 bin
+drwxr-x--- 3 root root   22 Sep 13 10:27 work
+drwx------ 3 root root  275 Sep 13 10:38 conf
+drwxr-x--- 2 root root  235 Sep 13 11:15 logs
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# cd webapps/
+[root@ip-10-0-0-233 webapps]# ls -lrth
+total 4.0K
+drwxr-x---  3 root root  283 Sep 13 10:26 ROOT
+drwxr-x--- 16 root root 4.0K Sep 13 10:26 docs
+drwxr-x---  6 root root   83 Sep 13 10:26 examples
+drwxr-x---  5 root root  103 Sep 13 10:26 manager
+drwxr-x---  5 root root   87 Sep 13 10:26 host-manager
+[root@ip-10-0-0-233 webapps]# cd ..
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# find . -name web.xml
+./conf/web.xml
+./webapps/ROOT/WEB-INF/web.xml
+./webapps/docs/WEB-INF/web.xml
+./webapps/docs/appdev/sample/web/WEB-INF/web.xml
+./webapps/examples/WEB-INF/web.xml
+./webapps/host-manager/WEB-INF/web.xml
+./webapps/manager/WEB-INF/web.xml
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]#
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# cd ./webapps/ROOT/WEB-INF/
+[root@ip-10-0-0-233 WEB-INF]# ls -lrth
+total 4.0K
+-rw-r----- 1 root root 1.2K Jun 30 21:53 web.xml
+[root@ip-10-0-0-233 WEB-INF]# more ./webapps/ROOT/WEB-INF/web.xml
+more: stat of ./webapps/ROOT/WEB-INF/web.xml failed: No such file or directory
+[root@ip-10-0-0-233 WEB-INF]# cd -
+/opt/apache-tomcat-8.5.57
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# more ./webapps/ROOT/WEB-INF/web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+
+</web-app>
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# ls -lt
+total 124
+drwxr-x--- 8 root root   121 Sep 13 11:24 webapps
+drwxr-x--- 2 root root   235 Sep 13 11:15 logs
+drwx------ 3 root root   275 Sep 13 10:38 conf
+drwxr-x--- 3 root root    22 Sep 13 10:27 work
+drwxr-x--- 2 root root  4096 Sep 13 10:26 bin
+drwxr-x--- 2 root root  4096 Sep 13 10:26 lib
+drwxr-x--- 2 root root    30 Sep 13 10:26 temp
+-rw-r----- 1 root root 19318 Jun 30 21:53 BUILDING.txt
+-rw-r----- 1 root root  5408 Jun 30 21:53 CONTRIBUTING.md
+-rw-r----- 1 root root 57011 Jun 30 21:53 LICENSE
+-rw-r----- 1 root root  1726 Jun 30 21:53 NOTICE
+-rw-r----- 1 root root  3255 Jun 30 21:53 README.md
+-rw-r----- 1 root root  7136 Jun 30 21:53 RELEASE-NOTES
+-rw-r----- 1 root root 16262 Jun 30 21:53 RUNNING.txt
+[root@ip-10-0-0-233 apache-tomcat-8.5.57]# cd bin/
+[root@ip-10-0-0-233 bin]# ./shutdown.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+[root@ip-10-0-0-233 bin]# ./startup.sh
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.amzn2.0.1.x86_64/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-10-0-0-233 bin]#

@@ -1,0 +1,30 @@
+JDK installation
+==================
+https://www.youtube.com/watch?v=IJ-PJbvJBGs&ab_channel=ProgrammingKnowledge
+
+
+Install Apache Tomact on Windows Server
+==================
+https://www.youtube.com/watch?v=pKMgr8uNvGM&ab_channel=SafaaAl-Hayali
+
+How to deploy your java web application on tomcat
+===================
+https://www.youtube.com/watch?v=pg6CMD6lR8s&ab_channel=JavaHub
+
+Install JAVA & Set Environment Variable on Amazon Linux - EC2
+===================
+https://www.youtube.com/watch?v=c_nF2RnyfDU&ab_channel=AutomationStepbyStep-RaghavPal
+
+Setup & configure Tomcat on EC2 instance | Tomcat server setup
+==========================================
+https://www.youtube.com/watch?v=m21nFreFw8A&ab_channel=ValaxyTechnologies
+https://github.com/ValaxyTech/DevOpsDemos/blob/master/Tomcat/tomcat_installation.MD
+
+Deploy Java Web App On Amazon Linux EC2 instance Using Tomcat
+==========================================	
+https://www.youtube.com/watch?v=_d-c9uGcUrU&ab_channel=CloudGeeks
+
+https://www.baeldung.com/tomcat-deploy-war
+https://www.webucator.com/how-to/how-deploy-web-application-using-the-apache-tomcat-manager-windows.cfm
+https://www.codejava.net/servers/tomcat/how-to-deploy-a-java-web-application-on-tomcat
+https://github.com/ValaxyTech/DevOpsDemos/blob/master/Tomcat/tomcat_installation.MD
